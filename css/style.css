@@ -1,7 +1,6 @@
 * {
     padding: 0;
     text-align: center;
-    margin: 5px;
     box-sizing: border-box; 
 
   }
@@ -10,10 +9,9 @@ h1{
 }
 html,body {
     border-radius: 30px;
-    background-color: rgba(184, 30, 176, 0.438);
     margin: 0;
     padding: 0;
-    display: flex;
+    display: flexbox;
     flex-direction: column;
     height: 100vh;
 }
@@ -52,7 +50,7 @@ a:not(hover){
 .header{
     text-align: center;
     background-color: rgb(1, 197, 135);
-    height: 150px;
+    height: 60px;
 }
 .nav {
     background-color: #9136bb;
@@ -63,34 +61,109 @@ a:not(hover){
     width: 100%;
     padding: 10px;
 }
-.section-1{
-    background-color: rgb(219, 253, 125);
-    height: 100%;
-    width: 50%;
-    margin-left: 0;
-}
-.section-2{
-    background-color: rgba(10, 141, 228, 0.438);
-    height: 100%;
-    width: 50%;
-    margin-right: 0;
-}
+ /* Main */
+
 .main {
-    height: calc(90vh - 200px);
+    width: 100%;
+    height: calc(100vh-500px);
     display: flex;
     align-items: center; 
+    justify-content: space-evenly;
   }
 
-  .section-1,
-  .section-2,
-  .footer {
+
+   /* Secciones 1 y 2  */
+
+.section-1, .section-2{
+    position: relative;
     display: flex;
-    align-items: center; 
-    justify-content: center; 
-  }
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(20%);
+    object-fit: cover;
+    height: 50%;
+    width: 30%;
+    margin-left: 0;
+    padding: 10px 0;
+}
+.section-2 img, .section-1 img{
+    z-index: 999;
+    margin-left: 0;
+    border-radius: 10px;
+    object-fit: fill;
+    max-width: 100%;
+    height: 100%;
+    box-shadow: -7px 7px 10px rgb(199, 199, 199);
+    
+}
+.section-1:hover, .section-2:hover {
+    font-size: 0.7em;
+    filter: grayscale(0%);
+    transform: scale(1.01);
+    transition: 0.5s;
+}
+
+.section-1:not(hover),.section-2:not(hover){
+    transition: 0.5s;
+}
+
+.texto-section{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #dfdfdf;
+    font-size: 3.4em;
+    position: absolute;
+    z-index: 9999;
+}
+
+    /* Media query menor a 1200px */
+
+@media(max-width:1200px){
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .section-1,.section-2{
+        width: 80%;
+        font-size: 1em;
+    }
+    .section-2 img, .section-1 img{
+        width: 50%;
+        height: 50%;
+        object-fit: fill;
+        
+    }
+    .section-1:hover, .section-2:hover {
+        font-size: 0.8em;
+
+    }
+}
+    @media(max-width:768px){
+
+        .section-1,.section-2{
+            width:100%;
+            height: 40%;
+            font-size: 1em;
+        }
+        .section-2 img, .section-1 img{
+            width: 65%;
+            height: 100%;
+            object-fit: fill;
+            
+        }
+        .section-1:hover, .section-2:hover {
+            font-size: 0.8em;
+    
+        }
+}
+
+
+
+    /* Footer  */
 
   footer{
-    background-color: rgb(236, 135, 67);
+
     position: relative;
     height: 350px;
     margin: 0;
@@ -250,6 +323,8 @@ form button:not(hover){
     transition: 0.4s;
     
 }
+
+    /* Media query width menor a 840 */
 @media(max-width: 840px){
     .footer{
         background-color: #353031;
@@ -266,6 +341,7 @@ form button:not(hover){
     
    }
 }
+    /* Media query width menor a 480 */
 @media(max-width: 480px){
     .footer{
         height: 650px;
@@ -281,3 +357,24 @@ form button:not(hover){
         height: 15%;
     }
 }
+
+header {
+    background-color: blueviolet;
+    padding: 10px;
+}
+p{
+   text-align: center;
+}
+.navheader{
+    text-decoration-line: none;
+    background-color: darksalmon;
+    border-radius: 5px;
+    padding: 5px ;
+}
+
+
+
+.resoc{
+    text-align: center;
+}
+
