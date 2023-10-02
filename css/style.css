@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    text-align: center;
+    margin: 5px;
+    box-sizing: border-box; 
+
+  }
+h1{
+    font-size: 2.5rem;
+}
+html,body {
+    border-radius: 30px;
+    background-color: rgba(184, 30, 176, 0.438);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+    color: #fdfcfc;
+}
+.header{
+    text-align: center;
+    background-color: rgb(1, 197, 135);
+    height: 150px;
+}
+.nav {
+    background-color: #9136bb;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+}
+.section-1{
+    background-color: rgb(219, 253, 125);
+    height: 100%;
+    width: 50%;
+    margin-left: 0;
+}
+.section-2{
+    background-color: rgba(10, 141, 228, 0.438);
+    height: 100%;
+    width: 50%;
+    margin-right: 0;
+}
+.main {
+    height: calc(90vh - 200px);
+    display: flex;
+    align-items: center; 
+  }
+
+  .section-1,
+  .section-2,
+  .footer {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+  }
+
+  footer{
+    background-color: rgb(236, 135, 67);
+    
+    height: 300px;
+    margin: 0;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.group-1 {
+    background-color: #353031;
+    margin: 0;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.group-2 {
+    background-color: #241e20;
+    margin: 0;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    color: #837e7e;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.caja-logo{
+    width: 25%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo-moksha{
+    width: 70px;
+}
+.texto-logo{
+    font-size: 1.2em;
+    color: #fdfcfc;
+
+    
+}
+.caja-direccion{
+    width: 25%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.direccion-h3{
+    color: #fdfcfc;
+
+}
+.guia-compra{
+    color: #fdfcfc;
+    
+}
+.caja-sugerencias{
+    width: 25%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.caja-newsletter{
+    background-color: #fdfcfc;
+    width: 25%;
+    height: 80%;
+}
+.texto-sugerencia{
+    color: #fdfcfc;
+}
+.mail-box{
+    height: 30px;
+    width: 60%;
+}
+.btn-sub{
+    height: 30px;
+    width: 90px;
+}
+
+
+.direcciones{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.direcciones img{
+    width: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
