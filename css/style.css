@@ -195,7 +195,7 @@ a:not(hover){
 
 }
 .caja-logo{
-    width: 100%;
+    width: 80%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -221,10 +221,16 @@ a:not(hover){
 }
 .direccion-h3{
     color: #fdfcfc;
+    margin-bottom: 0;
 
 }
 .guia-compra{
     color: #fdfcfc;
+    margin-bottom: 0;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        text-align: start;
     
 }
 .caja-sugerencias{
@@ -232,8 +238,19 @@ a:not(hover){
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-evenly;
+}
+.caja-sug-interna{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.texto-sugerencia{
+    text-align: start;
 }
 .caja-newsletter{
     background-color: #2b2626;
@@ -340,6 +357,13 @@ form button:not(hover){
     height: 10%;
     
    }
+   .guia-compra{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    text-align: start;
+
+}
 }
     /* Media query width menor a 480 */
 @media(max-width: 480px){
@@ -347,15 +371,44 @@ form button:not(hover){
         height: 650px;
     }
     .group-1{
+        padding: 10px 0px;
+        justify-content: space-around;
         grid-template-columns: repeat(1,1fr);
         font-size: 0.7em;
     }
     .caja-logo{
+        width: 100%;
+        padding-bottom: 10px;
         height: 40%;
+    }
+    .caja-direccion{
+        margin-left: 20px;
+        padding-bottom: 20px;
     }
     .group-2{
         height: 15%;
     }
+    .caja-newsletter{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    .caja-sugerencias{
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+    }
+    .guia-compra{
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        text-align: start;
+
+    }
+    
 }
 
 header {
