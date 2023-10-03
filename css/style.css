@@ -69,6 +69,11 @@ a:not(hover){
     display: flex;
     align-items: center; 
     justify-content: space-evenly;
+    
+    flex-wrap: wrap; 
+    /*añadido flex-wrap al .main para evitar que el
+    section-3 se muestre al lado del section-1 y 2*/
+
   }
 
 
@@ -116,6 +121,23 @@ a:not(hover){
     z-index: 9999;
     cursor: pointer;
 }
+    /* Seccion 3 */
+
+.section-3{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color:#dbdbdb;
+    padding: 35px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.section-3 p{
+    margin-left: 50px;
+    text-align: right;
+}
+
 
     /* Media query menor a 1200px */
 
@@ -139,6 +161,13 @@ a:not(hover){
     .section-1:hover, .section-2:hover {
         font-size: 0.8em;
 
+    }
+    .section-3{
+        display: flex;
+        flex-direction: column;
+    }
+    .section-3 p{
+        text-align: center;
     }
 }
     @media(max-width:768px){
@@ -169,7 +198,6 @@ a:not(hover){
     position: relative;
     height: 350px;
     margin: 0;
-    margin-top: 5px;
     display: flex;
     flex-direction: column;
 }
