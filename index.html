@@ -3,30 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>TP-CAC</title>
 </head>
 <body>
-    <header class="header">
-        <h1>HEADER</h1>
-        
-        <nav class="nav">
-            <a href="" class="nav-link">Hyperlink 1</a>
-            <a href="" class="nav-link">Hyperlink 2</a>
-            <a href="" class="nav-link">Hyperlink 3</a>
+    <header>
+        <p class=" header">MOKSHA SWEATERS</p>
+        <nav>
+          <a class="navheader" href="">Inicio</a>
+          <a class="navheader" href="">Productos Hombre</a>
+          <a class="navheader" href="">Productos Mujer</a>
+          <a class="navheader" href="">Contacto</a>
         </nav>
+  
+             
     </header>
+ 
    
     <main class="main">
         <section class="section-1">
-            
-            <h1>SECTION 1</h1>
+            <h2 class="texto-section">Mujer</h2>
+         <img src="img/img-mujer.png" alt="">
 
         </section>
 
         <section class="section-2">
-
-            <h1>SECTION 2</h1>
+            <h2 class="texto-section">Hombre</h2>
+          <img src="img/img-hombre.png" alt="">
 
         </section>
 
@@ -40,23 +43,61 @@
         </section>
     </main>
     <footer class="footer">
-        
-        <div class="redes">
-            <a href=""><img src="./img/facebook.png" alt=""><p>facebook.com/usuario</p></a>
-            <a href=""><img src="./img/instagram.png" alt=""><p>instagram.com/usuario</p></a>
-            <a href=""><img src="./img/whatsapp.png" alt=""><p>Contacto via WhatsApp</p></a>
-        </div>
-        
-        <div class="derechos">
-            <p>Copyright © 2023 <br> Todos los derechos reservados</p>
-        </div>
+        <div class="group-1">
+            <div class="caja-logo">
+                <a href="#">
+                    <img src="img/Logo.png" alt="" class="logo-moksha">
+                </a>
+                <p class="texto-logo">Moksha Sweaters</p>
+                <div class="caja-redes">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="img/ico-fb.png" alt="">
+                    </a>
+                    <a href="https://twitter.com/" target="_blank">
+                        <img src="img/ico-twitter.png" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="img/ico-insta.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="caja-direccion">
+                <h3 class="direccion-h3">Direcciones</h3>
+                <div class="direcciones">
+                    <img src="img/ico-tel.png" alt="">
+                    <a class="texto-direccion" href="#">+54 2965454813</a>
+                </div>
 
-        <div class="credits">
-            <p>
-                Sitio desarrollado en grupo: <br> Cecilia, Juan, Ricardo y Ruben
-            </p>
+               <div class="direcciones">  
+                <img src="img/ico-gmail.png" alt=""> 
+                <a class="texto-direccion" href="#">E-mailEjemplo@gmail.com</a>
+                </div>
+                <div class="direcciones">
+                    <img src="img/ico-ubi.png" alt="">
+                    <a class="texto-direccion" href="#">Av. Corrientes 1234, CABA, Buenos Aires. </a> 
+                </div>
+             
+            </div>
+            <div class="caja-sugerencias">
+                <div class="caja-sug-interna">
+                   <h3 class="guia-compra">Guia de compra</h3>
+                    <a class="texto-sugerencia" target="_blank" href="">Cómo comprar</a>
+                    <a class="texto-sugerencia"  target="_blank" href="">Envío</a>
+                    <a class="texto-sugerencia"  target="_blank" href="">Cambios y devolución</a> 
+                 </div> 
+            </div>
+            <div class="caja-newsletter">
+                <h3>Recibe nuestras ofertas</h3>
+                <form action="">
+                    <input type="email" required placeholder="Tu e-mail">
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
         </div>
-
+        <div class="group-2">
+            <p>Derechos reservados © 2023</p>
+            <p>Sitio creado por: Cecilia, Juan, Ricardo y Ruben </p>
+        </div>
     </footer>
     
 </body>
