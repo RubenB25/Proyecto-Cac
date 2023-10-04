@@ -1,0 +1,37 @@
+header {
+    background-color: blueviolet;
+    padding: 10px;
+}
+p{
+   text-align: center;
+}
+.navheader{
+    text-decoration-line: none;
+    background-color: darksalmon;
+    border-radius: 5px;
+    padding: 5px ;
+}
+
+footer{
+    text-align: center;
+    background-color:blueviolet ;
+}
+
+.resoc{
+    text-align: center;
+}
+img.mujer{
+    width: 40%;
+    height: 40%;
+    
+ }
+ img.hombre{
+    width: 40%;
+    height: 40%;
+    position: relative;
+ }
+ 
+  .header{
+   font-weight: bold;
+   font-size:xx-large;
+ }
