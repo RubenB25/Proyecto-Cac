@@ -14,11 +14,7 @@ html,body {
     display: flexbox;
     flex-direction: column;
     height: 100vh;
-    
-    /*Imagen de fondo*/
-    background-image: url(../img/fondo.png);
-    background-size: 69%;
-    background-position: center bottom -570px;
+    background-image: url(../img/fondo-2.jpg); /*Imagen de fondo*/
 }
 a{  
     position: relative;
@@ -64,8 +60,33 @@ a:not(hover){
     width: 100%;
     padding: 10px;
 }
- /* Main */
-
+ 
+    /*Carrito*/
+.carrito-boton{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.carrito-boton img{
+    height: 3rem;
+}
+.carrito-boton:hover{
+    transform: scale(1.10);
+    transition: 0.5s;
+}
+.carrito-boton:not(hover){
+    transition: 0.5s;
+}
+.carrito-abierto{
+    border: 2px solid red;
+    color: white;
+    padding: 2rem;
+}
+    /* Main */
 .main {
     width: 100%;
     height: calc(100vh-500px);
@@ -454,7 +475,7 @@ p{
 }
 .navheader{
     text-decoration-line: none;
-    background-color: darksalmon;
+    background-color: rgba(78, 61, 232, .7);
     border-radius: 5px;
     padding: 5px ;
 }
