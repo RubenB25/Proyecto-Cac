@@ -200,6 +200,13 @@ a{
     z-index: 9999;
     cursor: pointer;
 }
+hr{
+    width: 100%;
+    margin: 0;
+    border-color: rgb(197, 195, 195);
+    display: none;
+    
+}
 
     /* Media query menor a 1200px */
 
@@ -264,6 +271,9 @@ a{
             display: none;
 
         }
+        hr{
+            display: block;
+        }
 
         .nav-link{
             display: none;
@@ -277,6 +287,9 @@ a{
         }
         .header{
             background-color: white;
+        }
+        .nav{
+            margin-top: 10px;
         }
 }
 
