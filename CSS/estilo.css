@@ -23,15 +23,26 @@ footer{
 img.mujer{
     width: 40%;
     height: 40%;
-    
- }
+ 
+}
  img.hombre{
     width: 40%;
     height: 40%;
     position: relative;
- }
+}
  
-  .header{
+.header{
    font-weight: bold;
    font-size:xx-large;
- }
+}
+
+#icon-whatsapp{   
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px; 
+    right: 30px;
+    text-align: center;
+    font-size: 30px;
+}
