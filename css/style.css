@@ -7,7 +7,6 @@ h1{
     font-size: 2.5rem;
 }
 html,body {
-    border-radius: 30px;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -17,6 +16,7 @@ html,body {
     background-position: center;
     background-repeat: no-repeat;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body{
     display: flex;
@@ -76,7 +76,7 @@ a:not(hover){
     font-size: 1.2em;
     padding: 10px 15px;
     border: 1px solid #746b6b;
-    margin: 10px;
+    
     border-radius: 5px;
 }
 .nav-link:hover{
@@ -108,7 +108,7 @@ ul{
 }
 .ul-2{
     display: flex;
-    justify-content: end;
+    justify-content: space-evenly;
     width: 40%;
     margin-right: 20px;
 }
@@ -137,7 +137,23 @@ ul{
     color: white;
     text-align: start;
     padding-left: 10px;
+
 }
+.buscar-group{
+    position: relative;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+.img-lupa{
+    position: relative;
+    display: flex;
+    width: 30px;
+    align-items: end;
+    justify-content: end;
+
+}
+
 .a-header:hover{
     transform: none;
     padding: 0;
@@ -261,13 +277,13 @@ hr{
 }
 @media(max-width:990px){
     .input-buscador{
-        width: 150px;
+        width: 250px;
         transition: 0.7s;
     }
 }
 @media(min-width: 991px) {
     .input-buscador {
-        width: 200px;
+        width: 380px;
         transition: 0.7s;
     }
 }
@@ -292,8 +308,12 @@ hr{
         }
 
         ul{
-            display: none;
-
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .input-buscador{
+            color: black;
         }
         hr{
             display: block;
@@ -305,7 +325,7 @@ hr{
         .ul-2 img{
             width: 50px;
             padding: 5px;
-            border: 2px solid #837e7e;
+            border: 2px solid #a49d9d;
             border-radius: 5px;
             display: block;
         }
@@ -531,6 +551,9 @@ form button:not(hover){
     .footer{
         height: 650px;
     }
+    .input-buscador{
+        width: 100%;
+    }
     .group-1{
         padding: 10px 0px;
         justify-content: space-around;
@@ -545,6 +568,9 @@ form button:not(hover){
     .caja-direccion{
         margin-left: 20px;
         padding-bottom: 20px;
+    }
+    .texto-section{
+        font-size: 2.2em;
     }
     .group-2{
         height: 15%;
@@ -561,6 +587,7 @@ form button:not(hover){
         align-items: start;
         justify-content: space-evenly;
         margin-bottom: 20px;
+        padding: 20px;
     }
     .guia-compra{
         display: flex;

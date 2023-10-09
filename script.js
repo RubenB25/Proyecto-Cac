@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 header.style.height = '100vh';
                 header.style.transition = '0.4s';
                 header.style.zIndex = '9999';
-            } else {
+            } else{
                 header.style.height = '150px';
                 header.style.position = 'relative';
             }
@@ -39,7 +39,7 @@ aContacto.addEventListener('click', () => {
     setTimeout(() => {
         cajaDirec.style.backgroundColor = '#353031';
         cajaDirec.style.transition = '0.5';
-    }, 1200);
+    }, 2000);
 }
 );
 
