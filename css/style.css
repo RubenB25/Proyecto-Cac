@@ -2,7 +2,6 @@
     padding: 0;
     text-align: center;
     box-sizing: border-box; 
-
   }
 h1{
     font-size: 2.5rem;
@@ -21,7 +20,6 @@ a{
     text-decoration: none;
     color: #fdfcfc;
     margin: 0;
-    margin-left: 5px;
 }
 .caja-logo a:hover{
     padding-left: 0;
@@ -32,7 +30,6 @@ a{
     
 }
 .logo-moksha:not(hover){
-
     transition: 0.5s;
 }
 
@@ -41,12 +38,9 @@ a:hover{
     padding-left: 8px;
     transform: scale(1.02);
     transition: 0.5s;
-
 }
 a:not(hover){
-    
     transition: 0.5s;
-
 }
 .header{
     text-align: center;
@@ -62,32 +56,37 @@ nav {
     padding: 10px;
 }
  
-    /*Carrito*/
+    /*---Carrito---*/
 .carrito-boton{
-    display: flex;
-    justify-content: flex-end;
-    margin-left: auto;
-    background-color: transparent;
+    height: 64px;
+    width: 64px;
+    background-color: white;
     border: none;
-    padding: 10px;
+    border-radius: 50%;
     cursor: pointer;
+    position: fixed;
+    z-index: 9999;
+    bottom: 30px;
+    left: 30px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
 }
 .carrito-boton img{
-    height: 3rem;
+    height: 40px;
 }
 .carrito-boton:hover{
     transform: scale(1.10);
-    transition: 0.5s;
+    transition: 0.4s;
+    background-color: rgb(78, 61, 232);
 }
 .carrito-boton:not(hover){
-    transition: 0.5s;
+    transition: 0.4s;
 }
 .carrito-abierto{
     border: 2px solid red;
     color: white;
     padding: 2rem;
 }
-    /* Main */
+    /*---Main---*/
 .main {
     width: 100%;
     height: calc(100vh-500px);
@@ -147,26 +146,19 @@ nav {
     z-index: 9999;
     cursor: pointer;
 }
-    /* Seccion 3 */
-
+    /* Seccion 3 (Instagram)*/
 .section-3{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     background-color:rgba(221, 147, 247, .8);
-    padding: 35px;
     margin-top: 20px;
     width: 100%;
 }
-
-.section-3 p{
-    margin-left: 50px;
-    text-align: right;
+.section-3 a img{
+    height: 12rem;
 }
-
-
     /* Media query menor a 1200px */
-
 @media(max-width:1200px){
     .main{
         display: flex;
@@ -196,23 +188,24 @@ nav {
         text-align: center;
     }
 }
-    @media(max-width:768px){
-
-        .section-1,.section-2{
-            width:100%;
-            height: 40%;
-            font-size: 1em;
-        }
-        .section-2 img, .section-1 img{
-            width: 65%;
-            height: 100%;
-            object-fit: fill;
-            
-        }
-        .section-1:hover, .section-2:hover {
-            font-size: 0.8em;
-    
-        }
+    /* Media query menor a 768px */
+@media(max-width:768px){
+    .section-1,.section-2{
+        width:100%;
+        height: 40%;
+        font-size: 1em;
+    }
+    .section-2 img, .section-1 img{
+        width: 65%;
+        height: 100%;
+        object-fit: fill;  
+    }
+    .section-1:hover, .section-2:hover {
+        font-size: 0.8em;
+    }
+    .section-3 a img{
+        height: 7rem;
+    }
 }
 
 
@@ -264,8 +257,6 @@ nav {
 .texto-logo{
     font-size: 1.2em;
     color: #fdfcfc;
-
-    
 }
 .caja-direccion{
     width: 100%;
@@ -479,6 +470,7 @@ p{
     background-color: rgba(78, 61, 232, .7);
     border-radius: 5px;
     padding: 5px ;
+    margin-left: 5px;
 }
 
 
