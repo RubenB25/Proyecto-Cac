@@ -12,12 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
     menuBtn.addEventListener('click', () => {
         if (transicionCompletada) {
             transicionCompletada = false; 
-            if (header.style.height === '120px') {
+            if (header.style.height === '150px') {
                 header.style.height = '100vh';
                 header.style.transition = '0.4s';
                 header.style.zIndex = '9999';
             } else {
-                header.style.height = '120px';
+                header.style.height = '150px';
                 header.style.position = 'relative';
             }
             header.addEventListener('transitionend', () => {
@@ -48,9 +48,9 @@ window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
         header.style.backgroundColor = 'transparent';
         header.style.position = 'relative';
-        header.style.height = '120px';
+        header.style.height = '150px';
     } else {
-        header.style.backgroundColor = 'white'; // Cambiar al color por defecto
+        header.style.backgroundColor = 'white';
     }
 });
 

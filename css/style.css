@@ -16,6 +16,7 @@ html,body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    scroll-behavior: smooth;
 }
 body{
     display: flex;
@@ -33,7 +34,7 @@ a:not(hover){
 .header{
     width: 100%;
     background-color: transparent;
-    height: 120px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -289,7 +290,7 @@ hr{
             background-color: white;
         }
         .nav{
-            margin-top: 10px;
+            margin-top: 25px;
         }
 }
 
