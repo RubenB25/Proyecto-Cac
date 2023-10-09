@@ -45,4 +45,15 @@ img.mujer{
     right: 30px;
     text-align: center;
     font-size: 30px;
+    z-index: 9999;
+}
+.logo-whatsapp{
+    width: 100%;
+}
+.logo-whatsapp:hover{
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+.logo-whatsapp:not(hover){
+    transition: 0.4s;
 }
