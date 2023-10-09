@@ -51,8 +51,9 @@ a:not(hover){
 .header{
     text-align: center;
 }
-.nav {
-    background-color: rgba(221, 147, 247, .6);
+nav {
+    display: flex;
+    align-items: center;
     color: white;
     text-align: center;
     font-size: 18px;
