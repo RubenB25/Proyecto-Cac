@@ -15,11 +15,16 @@ html,body {
     height: 100vh;
     background-image: url(../img/fondo-2.jpg); /*Imagen de fondo*/
 }
-a{  
+.navheader{  
     position: relative;
     text-decoration: none;
     color: #fdfcfc;
     margin: 0;
+    text-decoration-line: none;
+    background-color: rgba(78, 61, 232, .7);
+    border-radius: 5px;
+    padding: 5px ;
+    margin-left: 5px;
 }
 .caja-logo a:hover{
     padding-left: 0;
@@ -33,13 +38,12 @@ a{
     transition: 0.5s;
 }
 
-
-a:hover{
+.navheader:hover{
     padding-left: 8px;
     transform: scale(1.02);
     transition: 0.5s;
 }
-a:not(hover){
+.navheader:not(hover){
     transition: 0.5s;
 }
 .header{
@@ -56,8 +60,8 @@ nav {
     padding: 10px;
 }
  
-    /*---Carrito---*/
-.carrito-boton{
+    /*---Carrito ABRIR---*/
+.abrir-carrito{
     height: 64px;
     width: 64px;
     background-color: white;
@@ -70,22 +74,45 @@ nav {
     left: 30px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
 }
-.carrito-boton img{
+.abrir-carrito img{
     height: 40px;
 }
-.carrito-boton:hover{
+.abrir-carrito:hover{
     transform: scale(1.10);
     transition: 0.4s;
     background-color: rgb(78, 61, 232);
 }
-.carrito-boton:not(hover){
+.abrir-carrito:not(hover){
     transition: 0.4s;
 }
-.carrito-abierto{
-    border: 2px solid red;
-    color: white;
-    padding: 2rem;
+
+    /*---Carrito CERRAR---*/
+.cerrar-carrito{
+    display: flex;
 }
+
+    /*---Carrito---*/
+.carrito{
+    opacity: 0;    
+    visibility: hidden;
+    width: 40vw;
+    background-color: #1c1c1c;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    color: #ececec;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+.carrito.visible{
+    opacity: 1;
+    visibility: visible;
+}
+
     /*---Main---*/
 .main {
     width: 100%;
@@ -158,6 +185,14 @@ nav {
 .section-3 a img{
     height: 12rem;
 }
+.section-3 a:hover{
+    transform: scale(1.02);
+    transition: .5s ease;
+}
+.section-3 a:not(:hover){
+    transition: .5s ease;
+}
+
     /* Media query menor a 1200px */
 @media(max-width:1200px){
     .main{
@@ -266,6 +301,20 @@ nav {
     align-items: flex-start;
     justify-content: space-evenly;
 }
+.caja-direccion a{
+    position: relative;
+    text-decoration: none;
+    color: #fdfcfc;
+    margin: 0;
+}
+.caja-direccion a:hover{
+    padding-left: 8px;
+    transform: scale(1.02);
+    transition: 0.5s;
+}
+.caja-direccion a:not(hover){
+    transition: 0.5s;
+}
 .direccion-h3{
     color: #fdfcfc;
     margin-bottom: 0;
@@ -287,6 +336,20 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+}
+.caja-sugerencias a{
+    position: relative;
+    text-decoration: none;
+    color: #fdfcfc;
+    margin: 0;
+}
+.caja-sugerencias a:hover{
+    padding-left: 8px;
+    transform: scale(1.02);
+    transition: 0.5s;
+}
+.caja-sugerencias a:not(hover){
+    transition: 0.5s;
 }
 .caja-sug-interna{
     width: 50%;
@@ -465,16 +528,6 @@ header {
 p{
    text-align: center;
 }
-.navheader{
-    text-decoration-line: none;
-    background-color: rgba(78, 61, 232, .7);
-    border-radius: 5px;
-    padding: 5px ;
-    margin-left: 5px;
-}
-
-
-
 .resoc{
     text-align: center;
 }

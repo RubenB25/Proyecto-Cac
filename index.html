@@ -15,7 +15,7 @@
             <a class="navheader" href="">Productos Mujer</a>
             <a class="navheader" href="">Contacto</a>
         </nav>
-        <button class="carrito-boton">
+        <button class="abrir-carrito" id="abrir">
             <img src="./img/carrito.png" alt="">
         </button>
     </header>
@@ -32,13 +32,14 @@
 
         </section>
 
-        <section class="carrito-abierto">
+        <aside class="carrito" id="carrito">
             <h3>Carrito de Compras</h3>
+            <button class="cerrar-carrito" id="cerrar">Cerrar</button>
             <p>Subtotal:</p>
             <p>Envio:</p>
             <p>Total:</p>
             <button id="comprar">Realizar compra</button>
-        </section>
+        </aside>
 
         <section class="section-3"> <!--Seccion Instagram-->                                         
             <a href="https://www.instagram.com/moksha_sweaters/" target="_blank">
@@ -104,5 +105,6 @@
         </div>
     </footer>
     
+    <script src="./js/main.js"></script>
 </body>
 </html>
