@@ -12,7 +12,13 @@ const app = createApp({
       return this.productos.filter((producto) =>
         producto.name.toLowerCase().includes(this.busqueda.toLowerCase())
       );
+      
+      
     },
+    productosLimitados() {
+      return this.productosFiltrados.slice(0, 3); // Esto limitará a los primeros 3 resultados
+    }
+    
   },
   created() {
     const url = "https://653551d5c620ba9358ec623f.mockapi.io/moksha/products/"; // Reemplaza con la URL correcta de tu API

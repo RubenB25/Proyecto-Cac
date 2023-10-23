@@ -26,18 +26,21 @@
                     <li class="buscador-group">
                         <div id="app">
                             <input id="input-buscador" type="text" v-model="busqueda" placeholder="Buscar">
-                            <ul>
+                            <ul id="buscador-box">
                                 <div class="results">
-                                    <li v-for="producto in productosFiltrados" :key="producto.id" id="results-box">
+                                    <li v-for="producto in productosLimitados" :key="producto.id">
+                                      <div id="results-box">
                                         <img :src="producto.img" alt="" id="img-buscador">
                                         <div id="contenedor-datos-result">
-                                            <p>{{ producto.name }} </p>
-                                            <p>{{producto.price}}</p>
+                                          <p>{{ producto.name }}</p>
+                                          <p>{{ producto.price }}</p>
                                         </div>
-   
+                                      </div>
                                     </li>
-                                    
-                                </div>
+                                    <div id="ver-todos">
+                                      <p id="text-ver">Ver todos los productos.</p>
+                                    </div>
+                                  </div>
                             </ul>
                         </div>
                 </div>
