@@ -156,6 +156,22 @@ ul{
     height: 450px;
     z-index: 9999;
     display: none;
+    cursor: pointer;
+  }
+  #img-buscador{
+    width: 70px;
+    margin: 10px;
+    
+  }
+  #results-box{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid rgb(227, 226, 226);
+  }
+  #contenedor-datos-result{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 .buscar-group{
     position: relative;

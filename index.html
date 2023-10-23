@@ -28,9 +28,15 @@
                             <input id="input-buscador" type="text" v-model="busqueda" placeholder="Buscar">
                             <ul>
                                 <div class="results">
-                                    <li v-for="producto in productosFiltrados" :key="producto.id">
-                                        <p>{{ producto.name }} </p>
+                                    <li v-for="producto in productosFiltrados" :key="producto.id" id="results-box">
+                                        <img :src="producto.img" alt="" id="img-buscador">
+                                        <div id="contenedor-datos-result">
+                                            <p>{{ producto.name }} </p>
+                                            <p>{{producto.price}}</p>
+                                        </div>
+   
                                     </li>
+                                    
                                 </div>
                             </ul>
                         </div>
