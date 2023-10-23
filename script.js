@@ -1,6 +1,41 @@
+const { createApp } = Vue;
+const app = createApp({
+  el: "#app",
+  data() {
+    return {
+      productos: [], // Aquí almacenarás los productos cargados desde la API
+      busqueda: "", // Agrega la propiedad 'busqueda'
+    };
+  },
+  computed: {
+    productosFiltrados() {
+      return this.productos.filter((producto) =>
+        producto.name.toLowerCase().includes(this.busqueda.toLowerCase())
+      );
+    },
+  },
+  created() {
+    const url = "https://653551d5c620ba9358ec623f.mockapi.io/moksha/products/"; // Reemplaza con la URL correcta de tu API
+
+    fetch(url)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("No se pudo cargar los productos desde la API");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        // Almacena los datos de la API en la variable 'productos'
+        this.productos = data;
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  },
+}); app.mount("#app")
 const menuBtn = document.getElementById('#menu-btn');
 const aContacto = document.querySelector('#a-contacto');
-const buscador = document.querySelector('.input-buscador');
+const buscador = document.querySelector('#input-buscador');
 const resultado = document.querySelector('.results');
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -67,4 +102,13 @@ document.addEventListener('click', (event) => {
         resultado.style.display = 'none'; 
     }
    
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const inputBuscador = document.getElementById("input-buscador");
+
+    inputBuscador.addEventListener('input', () => {
+    
+
+    });
 });

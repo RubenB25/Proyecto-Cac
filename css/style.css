@@ -129,7 +129,7 @@ ul{
 #buscador{
     position: relative;
 }
-.input-buscador{
+#input-buscador{
     position: relative;
     width: 200px;
     height: 40px;
@@ -143,6 +143,8 @@ ul{
 
 }
 .results{
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 100%; /* Coloca los resultados debajo del input */
     left: 0;
@@ -292,13 +294,13 @@ hr{
     }
 }
 @media(max-width:990px){
-    .input-buscador{
+    #input-buscador{
         width: 250px;
         transition: 0.7s;
     }
 }
 @media(min-width: 991px) {
-    .input-buscador {
+    #input-buscador {
         width: 380px;
         transition: 0.7s;
     }
@@ -328,7 +330,7 @@ hr{
             justify-content: center;
             align-items: center;
         }
-        .input-buscador{
+        #input-buscador{
             color: black;
         }
         hr{
@@ -567,7 +569,7 @@ form button:not(hover){
     .footer{
         height: 650px;
     }
-    .input-buscador{
+    #input-buscador{
         width: 100%;
     }
     .group-1{

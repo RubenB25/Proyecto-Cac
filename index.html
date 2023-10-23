@@ -24,9 +24,18 @@
             <ul>
                 <div id="buscador">
                     <li class="buscador-group">
-                        <input class="input-buscador" type="text" placeholder="Buscar">
-                        <div class="results"></div>
-                    </li>
+                        <div id="app">
+                            <input id="input-buscador" type="text" v-model="busqueda" placeholder="Buscar">
+                            <ul>
+                                <div class="results">
+                                    <li v-for="producto in productosFiltrados" :key="producto.id">
+                                        <p>{{ producto.name }} </p>
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+                </div>
+                </li>
                 </div>
                 <a class="a-header" href="#footer" id="a-contacto">
                     <li class="nav-link">
@@ -126,8 +135,8 @@
             <p>Sitio creado por: Cecilia, Juan, Ricardo y Ruben </p>
         </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.6/dist/vue.global.js"></script>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 
 </html>
