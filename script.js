@@ -1,6 +1,7 @@
 const menuBtn = document.getElementById('#menu-btn');
 const aContacto = document.querySelector('#a-contacto');
-
+const buscador = document.querySelector('.input-buscador');
+const resultado = document.querySelector('.results');
 
 document.addEventListener('DOMContentLoaded', () => {
     let transicionCompletada = true;
@@ -53,4 +54,17 @@ window.addEventListener('resize', () => {
         header.style.backgroundColor = 'white';
     }
 });
+buscador.addEventListener('input', () => {
+    if (buscador.value === "") {
+        resultado.style.display = 'none'; 
+    } else {
+        resultado.style.display = 'block'; 
+    }
+});
 
+document.addEventListener('click', (event) => {
+    if(!buscador.contains(event.target)&& !resultado.contains(event.target)){
+        resultado.style.display = 'none'; 
+    }
+   
+});

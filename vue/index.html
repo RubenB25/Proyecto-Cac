@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilo.css">
     <title>Prueba vue.js</title>
+
 </head>
+
 <body>
     <div id="app">
-        <h2>{{message}}</h2>
-        <div v-html="header"></div>
+        <label for="sexo">Selecciona un género:</label>
+        <select id="sexo" v-model="sexoSeleccionado">
+            <option v-for="genero in sexo" :key="genero" :value="genero">{{ genero }}</option>
+        </select>
+        <p>Categoría seleccionada: {{ sexoSeleccionado }}</p>
+        <ul id="liasd">
+            <li id="card" v-for="elemento in datosFiltrados" :key="elemento.id">
+                <img :src="elemento.img" alt="{{ elemento.name }}" class="card-image">
+                <div class="card-content">
+                    <h3>Nombre: {{ elemento.name }}</h3>
+                    <p>Precio: {{elemento.price}}</p>
+                </div>
+                
+            </li>
+        </ul>
     </div>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>   
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/main.js"></script>
 
 </body>
+
 </html>
