@@ -3,22 +3,17 @@ const app = createApp({
   el: "#app",
   data() {
     return {
-      productos: [], // Aquí almacenarás los productos cargados desde la API
-      busqueda: "", // Agrega la propiedad 'busqueda'
+      productos: [],
+      busqueda: "", 
     };
   },
   computed: {
-    productosFiltrados() {
-      return this.productos.filter((producto) =>
-        producto.name.toLowerCase().includes(this.busqueda.toLowerCase())
-      );
-      
-      
-    },
     productosLimitados() {
-      return this.productosFiltrados.slice(0, 3); // Esto limitará a los primeros 3 resultados
+      const busqueda = this.busqueda.toLowerCase();
+      return this.productos
+        .filter(producto => producto.name.toLowerCase().includes(busqueda))
+        .slice(0, 3);
     }
-    
   },
   created() {
     const url = "https://653551d5c620ba9358ec623f.mockapi.io/moksha/products/"; // Reemplaza con la URL correcta de tu API
@@ -31,7 +26,6 @@ const app = createApp({
         return response.json();
       })
       .then((data) => {
-        // Almacena los datos de la API en la variable 'productos'
         this.productos = data;
       })
       .catch((error) => {
