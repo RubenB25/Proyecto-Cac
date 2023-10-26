@@ -4,16 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&family=Montserrat:wght@300&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>TP-CAC</title>
+    <style>
+       html,body{
+            background-image: none!important;
+            background-color: rgb(252, 252, 252);
+        }
+        .a-header{
+            background-color: rgb(242, 171, 226);
+            
+        }
+        .a-header li{
+            color: black;
+        }
+        #input-buscador{
+            color: black;
+        }
+        .header{
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgb(221, 221, 221);
+        }
+    </style>
 </head>
-<!--Ruben Busqueda.-->
 
-<body class="body">
+<body>
     <header class="header" style="height: 150px;">
         <a href="https://api.whatsapp.com/send?phone=3516548481" id="icon-whatsapp" target="_blank">
             <img src="img/logo-whatsapp.png" alt="" class="logo-whatsapp"></a>
@@ -28,23 +47,24 @@
             <ul>
                 <div id="buscador">
                     <li class="buscador-group">
+
                         <div id="app1">
                             <input id="input-buscador" type="text" v-model="busqueda" placeholder="Buscar">
                             <ul id="buscador-box">
                                 <div class="results">
                                     <li v-for="producto in productosLimitados" :key="producto.id">
-                                      <button v-on:click="mostrarProducto(producto)" id="results-box">
-                                        <img :src="producto.img" alt="" id="img-buscador">
-                                        <div id="contenedor-datos-result">
-                                          <p>{{ producto.name }}</p>
-                                          <p>{{ producto.price }}</p>
-                                        </div>
-                                      </button>
+                                        <button v-on:click="mostrarProducto(producto)" id="results-box">
+                                            <img :src="producto.img" alt="" id="img-buscador">
+                                            <div id="contenedor-datos-result">
+                                                <p>{{ producto.name }}</p>
+                                                <p>{{ producto.price }}</p>
+                                            </div>
+                                        </button>
                                     </li>
                                     <div id="ver-todos">
-                                      <p id="text-ver">Ver todos los productos.</p>
+                                        <p id="text-ver">Ver todos los productos.</p>
                                     </div>
-                                  </div>
+                                </div>
                             </ul>
                         </div>
                 </div>
@@ -75,21 +95,24 @@
 
 
     </header>
-    <hr>
-
-
     <main class="main">
-        <section class="section-1">
-            <h2 class="texto-section">Mujer</h2>
-            <img src="img/img-mujer.png" alt="">
+        <div id="app2" class="product">
+            <div id="product-container">
+                <img :src="producto.img" alt="">
+                <div id="product-details">
+                    <h1>Nombre del producto: {{ producto.name }}</h1>
+                    <h2>Precio: {{ producto.price}}</h2>
+                    <div id="cST">
+                        <p>Color: {{producto.color}}</p>
+                        <p>Stock: {{producto.stock}}</p>
+                        <p>Talle: {{producto.size}}</p>
+                    </div>
+                    <h3>Descripción:{{producto.description}}</h3>
 
-        </section>
+                </div>
 
-        <section class="section-2">
-            <h2 class="texto-section">Hombre</h2>
-            <img src="img/img-hombre.png" alt="">
-
-        </section>
+            </div>
+        </div>
     </main>
     <footer class="footer" id="footer">
         <div class="group-1">
@@ -150,6 +173,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/vue@3.2.6/dist/vue.global.js"></script>
     <script src="script.js"></script>
+
 </body>
 
 </html>
