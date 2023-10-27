@@ -11,30 +11,35 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <style>
-       html,body{
-            background-image: none!important;
+        html,
+        body {
+            background-image: none !important;
             background-color: rgb(252, 252, 252);
         }
-        .a-header{
+
+        .a-header {
             border-radius: 5px;
-            background-color: rgb(248, 215, 240);
-            background-image: linear-gradient(to bottom, rgba(255, 204, 244, 0.854),rgba(249, 226, 255, 0.859));
+            background-image: linear-gradient(to bottom, rgba(250, 207, 216, 0.854), rgba(255, 230, 235, 0.905));
             color: white;
         }
-        .a-header li{
+
+        .a-header li {
             color: rgb(79, 79, 79);
         }
-        #input-buscador{
+
+        #input-buscador {
             color: black;
         }
-        .header{
-            border-bottom: 1px solid rgb(221, 221, 221);
-        }
-        .nav-link:hover{
-    background-color: rgb(239, 149, 255);
-    color: white;
-    }
 
+        .header {
+            border-bottom: 1px solid rgb(221, 221, 221);
+            /* box-shadow: -3px 4px 2px rgb(163, 163, 163); */
+        }
+
+        .nav-link:hover {
+            background-color: rgb(251, 191, 221);
+            color: white;
+        }
     </style>
 </head>
 
@@ -108,12 +113,27 @@
                     <img :src="producto.img" alt="">
                 </div>
                 <div id="product-details">
-                    <p>{{ producto.name }}</p>
-                    <p>Precio: {{ producto.price}}</p>
+                    <div id="details-header">
+                        <p>{{ producto.name }}</p>
+                        <p>{{ producto.price}}</p>
+                    </div>
+
                     <div id="cST">
                         <p>Color: {{producto.color}}</p>
                         <p>Stock: {{producto.stock}}</p>
                         <p>Talle: {{producto.size}}</p>
+                    </div>
+                    <div id="quantity-container">
+                        <p>Cantidad: </p>
+                        <div class="quantity-control">
+                            <button class="decrement">-</button>
+                            <input type="number" min="1" max="100" class="quantity" value="1">
+                            <button class="increment">+</button>
+                        </div>
+                    </div>
+                   
+                    <div id="add-cart">
+                        <p>Agregar al carrito</p>
                     </div>
                     <p>Descripción:{{producto.description}}</p>
 
