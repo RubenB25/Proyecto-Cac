@@ -60,24 +60,29 @@
                     <li class="buscador-group">
 
                         <div id="app1">
-                            <input id="input-buscador" type="text" v-model="busqueda" placeholder="Buscar">
-                            <ul id="buscador-box">
-                                <div class="results">
-                                    <li v-for="producto in productosLimitados" :key="producto.id">
-                                        <button v-on:click="mostrarProducto(producto)" id="results-box">
-                                            <img :src="producto.img" alt="" id="img-buscador">
-                                            <div id="contenedor-datos-result">
-                                                <p>{{ producto.name }}</p>
-                                                <p>{{ producto.price }}</p>
-                                            </div>
-                                        </button>
-                                    </li>
-                                    <div id="ver-todos">
-                                        <p id="text-ver">Ver todos los productos.</p>
-                                    </div>
-                                </div>
-                            </ul>
+                            <div class="search-input-container">
+                                <input id="input-buscador" type="text" v-model="busqueda" placeholder="Buscar"
+                                    class="input-with-lupa">
+                            </div>
                         </div>
+
+                        <ul id="buscador-box">
+                            <div class="results">
+                                <li v-for="producto in productosLimitados" :key="producto.id">
+                                    <button v-on:click="mostrarProducto(producto)" id="results-box">
+                                        <img :src="producto.img" alt="" id="img-buscador">
+                                        <div id="contenedor-datos-result">
+                                            <p>{{ producto.name }}</p>
+                                            <p>{{ producto.price }}</p>
+                                        </div>
+                                    </button>
+                                </li>
+                                <div id="ver-todos">
+                                    <p id="text-ver">Ver todos los productos.</p>
+                                </div>
+                            </div>
+                        </ul>
+                </div>
                 </div>
                 </li>
                 </div>
@@ -110,18 +115,18 @@
         <div id="app2" class="product">
             <div id="product-container">
                 <div id="container-img">
-                    <img :src="producto.img" alt="">
+                    <img :src="producto && producto.img ? producto.img : ''" alt="">
                 </div>
                 <div id="product-details">
                     <div id="details-header">
-                        <p>{{ producto.name }}</p>
-                        <p>{{ producto.price}}</p>
+                        <p>{{ producto && producto.name ? producto.name : '' }}</p>
+                        <p>{{ producto && producto.price ? producto.price : '' }}</p>
                     </div>
 
                     <div id="cST">
-                        <p>Color: {{producto.color}}</p>
-                        <p>Stock: {{producto.stock}}</p>
-                        <p>Talle: {{producto.size}}</p>
+                        <p>Color: {{ producto && producto.color ? producto.color : '' }}</p>
+                        <p>Stock: {{ producto && producto.stock ? producto.stock : '' }}</p>
+                        <p>Talle: {{ producto && producto.size ? producto.size : '' }}</p>
                     </div>
                     <div id="quantity-container">
                         <p>Cantidad: </p>
@@ -131,11 +136,11 @@
                             <button class="increment">+</button>
                         </div>
                     </div>
-                   
+
                     <div id="add-cart">
                         <p>Agregar al carrito</p>
                     </div>
-                    <p>Descripción:{{producto.description}}</p>
+                    <p>Descripción: {{ producto && producto.description ? producto.description : '' }}</p>
 
                 </div>
 
@@ -200,8 +205,10 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/vue@3.2.6/dist/vue.global.js"></script>
-    <script src="script.js"></script>
+    <script src="vue/js/vueAppHome.js"></script>
+    <script src="vue/js/vueAppPV.js"></script>
 
+    <script src="script.js"></script>
 </body>
 
 </html>

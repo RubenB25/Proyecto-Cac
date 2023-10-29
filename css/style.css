@@ -164,6 +164,24 @@ ul {
     padding-left: 10px;
 
 }
+.search-input-container {
+    display: inline-block;
+}
+
+.input-with-lupa {
+    padding-right: 30px; /* Espacio suficiente para el icono de lupa */
+    background-image: url('../img/img-lupa.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+.input-with-lupa::after {
+    content: '';
+    display: inline-block;
+    width: 20px; /* Ancho del icono de lupa */
+    height: 20px; /* Alto del icono de lupa */
+    background-image: url('../img/img-lupa.png');
+    background-size: cover;
+}
 
 .results {
     display: flex;

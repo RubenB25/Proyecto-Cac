@@ -1,49 +1,4 @@
 
-const { createApp } = Vue;
-const app1 = createApp({
-  el: "#app1",
-  data() {
-    return {
-      productos: [],
-      busqueda: "",
-      productoSeleccionado: null,
-    };
-  },
-  computed: {
-    productosLimitados() {
-      const busqueda = this.busqueda.toLowerCase();
-      return this.productos
-        .filter(producto => producto.name.toLowerCase().includes(busqueda))
-        .slice(0, 3);
-    },
-    
-  },
-  methods: {
-    mostrarProducto(producto) {
-      const productoId = producto.id;
-          // Redirige a la página del producto con el ID
-          window.location.href = `producto.html?id=${productoId}`;
-   
-    },
-  },
-  created() {
-    const url = "https://653551d5c620ba9358ec623f.mockapi.io/moksha/products/"; 
-
-    fetch(url)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("No se pudo cargar los productos desde la API");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        this.productos = data;
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  },
-}); app1.mount("#app1")
 
 const menuBtn = document.getElementById('#menu-btn');
 const aContacto = document.querySelector('#a-contacto');
@@ -124,32 +79,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 });
-const { createApp2 } = Vue;
-const app2 = createApp({
-    data() {
-        return {
-            producto: null, // Inicializar producto como nulo
-        };
-    },
-    created() {
-        // Obtener el ID del producto desde la URL
-        const params = new URLSearchParams(window.location.search);
-        const productoId = params.get("id");
-        const url = `https://653551d5c620ba9358ec623f.mockapi.io/moksha/products/${productoId}`;
-
-        fetch(url)
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error("No se pudo cargar los detalles del producto desde la API");
-                }
-                return response.json();
-            })
-            .then((data) => {
-                this.producto = data; // Almacenar los detalles del producto
-            })
-            .catch((error) => {
-                console.error(error);
-            });
-    },
-});
-app2.mount("#app2");
