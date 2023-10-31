@@ -1098,3 +1098,99 @@ div img{
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+
+
+  /*---Carrito ABRIR---*/
+  .abrir-carrito{
+    height: 64px;
+    width: 64px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    z-index: 9999;
+    bottom: 30px;
+    left: 30px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+}
+.abrir-carrito img{
+    height: 40px;
+}
+.abrir-carrito:hover{
+    transform: scale(1.10);
+    transition: 0.4s;
+    background-color: rgb(78, 61, 232);
+}
+.abrir-carrito:not(hover){
+    transition: 0.4s;
+}
+
+    /*---Carrito CERRAR---*/
+.cerrar-carrito{
+    display: flex;
+}
+
+    /*---Carrito---*/
+.carrito{
+    opacity: 0;    
+    visibility: hidden;
+    width: 40vw;
+    background-color: #1c1c1c;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    color: #ececec;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
+    height: 100%;
+    z-index: 10000;
+}
+.carrito.visible{
+    opacity: 1;
+    visibility: visible;
+}
+
+    /*---Botones dentro del carrito---*/
+#comprar{
+    padding: 1rem;
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px #837e7e;
+}
+#comprar:hover{
+    background-color:#1c1c1c;
+    color: white;
+    box-shadow: 0px 0px 10px white;
+    transition: .4s ease;
+    cursor: pointer;
+    transform: scale(1.03);
+}
+#comprar:not(hover){
+    transition: .4s ease;
+}
+#cerrar{
+    padding: 6px;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px #837e7e;
+}
+#cerrar:hover{
+    background-color:#1c1c1c;
+    color: white;
+    box-shadow: 0px 0px 10px white;
+    transition: .4s ease;
+    cursor: pointer;
+    transform: scale(1.03);
+    font-weight: 600;
+}
+#cerrar:not(hover){
+    transition: .4s ease;
+}
+
