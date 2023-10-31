@@ -14,7 +14,7 @@ createApp({
                 .then(response => response.json())
                 .then(  data => {
                     console.log(data),
-                    this.datos1=data.ArtHombre
+                    this.datos1=data;
 
 
                 }
