@@ -12,9 +12,15 @@ html,body {
     padding: 0;
     display: flexbox;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     background-image: url(../img/fondo-2.jpg); /*Imagen de fondo*/
 }
+
+    /*Deshabilita el scroll cuando el carrito esta abierto*/
+.no-scroll {
+    overflow: hidden;
+}
+
 .navheader{  
     position: relative;
     text-decoration: none;
@@ -107,10 +113,50 @@ nav {
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
+    height: 100%;
+    z-index: 10000;
 }
 .carrito.visible{
     opacity: 1;
     visibility: visible;
+}
+
+    /*---Botones dentro del carrito---*/
+#comprar{
+    padding: 1rem;
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px #837e7e;
+}
+#comprar:hover{
+    background-color:#1c1c1c;
+    color: white;
+    box-shadow: 0px 0px 10px white;
+    transition: .4s ease;
+    cursor: pointer;
+    transform: scale(1.03);
+}
+#comprar:not(hover){
+    transition: .4s ease;
+}
+#cerrar{
+    padding: 6px;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px #837e7e;
+}
+#cerrar:hover{
+    background-color:#1c1c1c;
+    color: white;
+    box-shadow: 0px 0px 10px white;
+    transition: .4s ease;
+    cursor: pointer;
+    transform: scale(1.03);
+    font-weight: 600;
+}
+#cerrar:not(hover){
+    transition: .4s ease;
 }
 
     /*---Main---*/
@@ -173,6 +219,7 @@ nav {
     z-index: 9999;
     cursor: pointer;
 }
+
     /* Seccion 3 (Instagram)*/
 .section-3{
     display: flex;
@@ -193,6 +240,19 @@ nav {
     transition: .5s ease;
 }
 
+    /* Seccion 4 (Medios de pago) */
+.section-4{
+    background-color: rgba(221, 147, 247);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#merc-pago{
+    height: 6rem;
+}
     /* Media query menor a 1200px */
 @media(max-width:1200px){
     .main{
