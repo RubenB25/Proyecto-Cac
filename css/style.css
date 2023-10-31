@@ -22,6 +22,39 @@ body {
 body {
     display: flex;
 }
+/* Seccion 3 (Instagram)*/
+.section-3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(221, 147, 247, .8);
+    margin-top: 20px;
+    width: 100%;
+}
+.section-3 a img{
+    height: 12rem;
+}
+.section-3 a:hover{
+    transform: scale(1.02);
+    transition: .5s ease;
+}
+.section-3 a:not(:hover){
+    transition: .5s ease;
+}
+
+    /* Seccion 4 (Medios de pago) */
+.section-4{
+    background-color: rgba(221, 147, 247);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#merc-pago{
+    height: 6rem;
+}
 
 /*-----------Icono whatsapp-----------*/
 #icon-whatsapp {
@@ -48,7 +81,13 @@ body {
 .logo-whatsapp:not(hover) {
     transition: 0.4s;
 }
-
+.section-wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
 /* ----------HEADER-------- */
 a:hover {
     transition: 0.5s;
@@ -62,6 +101,7 @@ a:not(hover) {
 }
 
 .header {
+    position: relative;
     width: 100%;
     background-color: transparent;
     height: 200px;
@@ -306,6 +346,7 @@ a {
 /* Main */
 
 .main {
+    position: relative;
     width: 100%;
     height: calc(100vh-500px);
     display: flex;
@@ -328,7 +369,6 @@ a {
     height: 50%;
     width: 30%;
     margin-left: 0;
-    padding: 20px 0;
 }
 
 .section-2 img,
@@ -536,13 +576,13 @@ input::-webkit-inner-spin-button {
 
     .section-1,
     .section-2 {
-        width: 80%;
+        width: 100%;
         font-size: 1em;
     }
 
     .section-2 img,
     .section-1 img {
-        width: 50%;
+        width: 70%;
         height: 50%;
         object-fit: fill;
 
@@ -564,6 +604,31 @@ input::-webkit-inner-spin-button {
         width: 250px;
         transition: 0.7s;
     }
+    .section-wrapper{
+        position: relative;
+        height: 1400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+    }
+    .section-2 img,
+    .section-1,
+    .section-2 {
+        margin-top: 20px;
+        height: 50%;
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+    .a-main{
+        width: 420px;
+        height: 90%;
+        margin-bottom: 20px;
+    }
+    .a-main img{
+        width: 100%;
+        height: 100%;
+    }
 }
 
 @media(min-width: 991px) {
@@ -576,9 +641,45 @@ input::-webkit-inner-spin-button {
 /* Media query menor a 768px */
 @media(max-width:768px) {
     .product {
-        position: relative;
-        height: 1200px;
+        height: 1000px;
     }
+    .section-wrapper{
+        max-height: 900px;
+        min-height: 1100px;
+
+        justify-content: start;
+    }
+    .section-1,
+    .section-2 {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        width: 100%;
+        height: 50%;
+        font-size: 1em;
+    }
+    .a-main{
+        width: 380px;
+        height: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* .a-main img{
+        width: 100%;
+    } */
+    /* .section-wrapper{
+        max-height: 100px;
+        min-height: 1200px;
+    } */
+    /* .section-1,
+    .section-2 {
+        width: 100%;
+        height: 50%;
+        font-size: 1em;
+
+    } */
+    .section-3{
+        margin-top: 150px;
+    }    
     #product-details{
         border: none;
         height: 80%;
@@ -617,21 +718,12 @@ input::-webkit-inner-spin-button {
         border-radius: 10px;
     }
 
-    .section-1,
-    .section-2 {
-        width: 100%;
-        height: 40%;
-        font-size: 1em;
-        padding: 15px;
-    }
 
-    .section-2 img,
-    .section-1 img {
-        width: 65%;
-        height: 100%;
-        object-fit: fill;
-
-    }
+    .section-3 a img{
+        margin: 0;
+        width: 350px;
+        height: 130px;
+}
 
     .section-1:hover,
     .section-2:hover {
@@ -973,6 +1065,31 @@ form button:not(hover) {
         text-align: start;
 
     }
+    .section-wrapper{
+        max-height: 100px;
+        min-height: 1200px;
+        justify-content: space-between;
+    }
+    .section-1,
+    .section-2 {
+        width: 100%;
+        height: 50%;
+        font-size: 1em;
+
+    }
+    .section-3{
+        margin-top: 70px;
+    }    
+
+    /* .a-main{
+        width: 100%;
+        height: 50%;
+        margin: 0;
+    }
+    .a-main img{
+        width: 100%;
+        height: 100%;
+    } */
 
 }
 
@@ -1195,43 +1312,6 @@ div img{
 
 
 
-.section-wrapper{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-}
-    /* Seccion 3 (Instagram)*/
-    .section-3{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color:rgba(221, 147, 247, .8);
-        margin-top: 20px;
-        width: 100%;
-    }
-    .section-3 a img{
-        height: 12rem;
-    }
-    .section-3 a:hover{
-        transform: scale(1.02);
-        transition: .5s ease;
-    }
-    .section-3 a:not(:hover){
-        transition: .5s ease;
-    }
+
     
-        /* Seccion 4 (Medios de pago) */
-    .section-4{
-        background-color: rgba(221, 147, 247);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-    #merc-pago{
-        height: 6rem;
-    }
     
