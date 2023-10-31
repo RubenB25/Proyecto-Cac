@@ -1,38 +1,44 @@
 
 
-const menuBtn = document.getElementById('#menu-btn');
 const aContacto = document.querySelector('#a-contacto');
 const buscador = document.querySelector('#input-buscador');
 const resultado = document.querySelector('.results');
 
-document.addEventListener('DOMContentLoaded', () => {
-    let transicionCompletada = true;
-    const header = document.querySelector('.header');
-    const main = document.querySelector('.main');
-    const ul = document.querySelector('ul');
-    const menuBtn = document.querySelector('#menu-btn');
+const ulMenu = document.querySelector(".ul-menu");
+const menuBtn = document.querySelector("#menu-btn"); // Reemplaza "#menuBtn" con el selector correcto para tu botón
+const header = document.querySelector('.header');
 
-    menuBtn.addEventListener('click', () => {
-        if (transicionCompletada) {
-            transicionCompletada = false; 
-            if (header.style.height === '150px') {
-                header.style.height = '100vh';
-                header.style.transition = '0.4s';
-                header.style.zIndex = '9999';
-            } else{
-                header.style.height = '150px';
-                header.style.position = 'relative';
-            }
-            header.addEventListener('transitionend', () => {
-                if (header.style.height === '100vh') {
-                    header.style.position = 'fixed';
-                }
-                transicionCompletada = true;
-            }, { once: true });
+let transicionCompletada = true; // Asegúrate de que transicionCompletada esté definida
+
+menuBtn.addEventListener('click', () => {
+    if (transicionCompletada) {
+        transicionCompletada = false;
+
+        if (header.style.height === '150px') {
+            header.style.height = '100vh';
+            header.style.transition = '0.4s';
+           
+            header.style.zIndex = '9999';
+            setTimeout(()=>{
+                menuBtn.classList.add('menu-opened');
+            ulMenu.style.display="flex";
+        },200);
+
+        } else {
+            header.style.height = '150px';
+            header.style.position = 'relative';
+            ulMenu.style.display = "none"; // Oculta la lista al cerrar el menú
+            menuBtn.classList.remove('menu-opened'); // Remueve la clase para restaurar el aspecto original del botón
         }
-    });
-});
 
+        header.addEventListener('transitionend', () => {
+            if (header.style.height === '100vh') {
+                header.style.position = 'fixed';
+            }
+            transicionCompletada = true;
+        }, { once: true });
+    }
+});
 aContacto.addEventListener('click', () => {
     const cajaDirec = document.querySelector('.caja-direccion');
     setTimeout(() => {
@@ -47,13 +53,17 @@ aContacto.addEventListener('click', () => {
 );
 
 window.addEventListener('resize', () => {
+    
+
     const header = document.querySelector('.header');
     if (window.innerWidth > 768) {
         header.style.backgroundColor = 'transparent';
         header.style.position = 'relative';
         header.style.height = '150px';
+        ulMenu.style.display= "none";
     } else {
         header.style.backgroundColor = 'white';
+        
     }
 });
 buscador.addEventListener('input', () => {
@@ -96,3 +106,4 @@ cerrar.addEventListener("click", () => {
     carrito.classList.remove("visible");
     document.body.classList.remove("no-scroll");
 })
+
