@@ -1071,3 +1071,30 @@ form button:not(hover) {
     font-size: 14px;
     font-weight: 600;
   }
+
+
+
+  .gallery{
+    display: flex;
+    margin: auto;
+}
+.container_img{
+    min-width: 200px;
+    max-width: 500px;
+    object-fit: cover;
+    padding: 3px;
+    flex: 1;
+}
+.tarjeta{
+    width: 300px;
+    border: 1px solid black;
+    margin: 10px;
+}
+div img{
+    width: 100%;
+}
+#app{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

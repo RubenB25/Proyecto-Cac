@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="en">
+ <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Hombre</title>
+    <script src="https://kit.fontawesome.com/5891e1a1cd.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
     <style>
         html,
         body {
@@ -35,17 +38,15 @@
             color: white;
         }
     </style>
-    <title>Iniciar Sesión - Moksha Sweaters</title>
+  
 </head>
-<body>
-    <header class="header" style="height: 150px;">
+<header class="header" style="height: 150px;">
         <a href="https://api.whatsapp.com/send?phone=3516548481" id="icon-whatsapp" target="_blank">
-            <img src="img/logo-whatsapp.png" alt="" class="logo-whatsapp"></a>
+            <img src="IMAGENES/logo-whatsapp.png" alt="" class="logo-whatsapp"></a>
         <nav class="nav">
-            <!--Ruben header.-->
             <div class="logo-header">
                 <a href="index.html">
-                    <img src="img/Logo.png" alt="">
+                    <img src="IMAGENES/Logo.png" alt="">
                 </a>
 
             </div>
@@ -53,27 +54,24 @@
                 <div id="buscador">
                     <li class="buscador-group">
                         <div id="app1">
-                            <div class="search-input-container">
-                                <input id="input-buscador" type="text" v-model="busqueda" placeholder="Buscar"
-                                    class="input-with-lupa">
-                            </div>
-                        <ul id="buscador-box">
-                            <div class="results">
-                                <li v-for="producto in productosLimitados" :key="producto.id">
-                                    <button v-on:click="mostrarProducto(producto)" id="results-box">
+                            <input id="input-buscador" type="text" v-model="busqueda" placeholder="Buscar">
+                            <ul id="buscador-box">
+                                <div class="results">
+                                    <li v-for="producto in productosLimitados" :key="producto.id">
+                                      <div id="results-box">
                                         <img :src="producto.img" alt="" id="img-buscador">
                                         <div id="contenedor-datos-result">
-                                            <p>{{ producto.name }}</p>
-                                            <p>{{ producto.price }}</p>
+                                          <p>{{ producto.name }}</p>
+                                          <p>{{ producto.price }}</p>
                                         </div>
-                                    </button>
-                                </li>
-                                <div id="ver-todos">
-                                    <p id="text-ver">Ver todos los productos.</p>
-                                </div>
-                            </div>
-                        </ul>
-                </div>
+                                      </div>
+                                    </li>
+                                    <div id="ver-todos">
+                                      <p id="text-ver">Ver todos los productos.</p>
+                                    </div>
+                                  </div>
+                            </ul>
+                        </div>
                 </div>
                 </li>
                 </div>
@@ -95,85 +93,73 @@
                     </li>
                 </a>
                 <a class="a-header" href="#">
-                    <img src="img/img-btn2.png" id="menu-btn" alt="">
+                    <img src="IMAGENES/img-btn2.png" id="menu-btn" alt="">
                 </a>
             </ul>
         </nav>
 
 
     </header>
- 
-   
-    <main class="main">
-        <div class="signupFrm">
-            <form action="" class="form">
-              <h1 class="title">Iniciar Sesión</h1>
-        
-              <div class="inputContainer">
-                <input type="text" class="input" placeholder="a">
-                <label for="" class="label">E-mail</label>
-              </div>
-        
-              <div class="inputContainer">
-                <input type="text" class="input" placeholder="a">
-                <label for="" class="label">Contraseña</label>
-              </div>
 
-                <input type="submit" class="submitBtn" value="Ingresar">
-        
-           
-            </form>
-          </div>
-    </main>
-    <footer class="footer">
+<body>
+
+    <div id="app">
+        <div class="tarjeta" v-for="elemento in datos1">
+            <img v-bind:src="elemento.foto" :alt="elemento.nombre">
+            <!-- <p>ID:{{elemento.id}}</p> -->
+            <p>Nombre:{{elemento.nombre}}</p>
+            <p>{{elemento.Precio}}</p>
+        </div>
+    </div>
+    <footer class="footer" id="footer">
         <div class="group-1">
             <div class="caja-logo">
                 <a href="#">
-                    <img src="img/Logo.png" alt="" class="logo-moksha">
+                    <img src="IMAGENES/Logo.png" alt="" class="logo-moksha">
                 </a>
                 <p class="texto-logo">Moksha Sweaters</p>
                 <div class="caja-redes">
                     <a href="https://www.facebook.com/" target="_blank">
-                        <img src="img/ico-fb.png" alt="">
+                        <img src="IMAGENES/ico-fb.png" alt="">
                     </a>
                     <a href="https://twitter.com/" target="_blank">
-                        <img src="img/ico-twitter.png" alt="">
+                        <img src="IMAGENES/ico-twitter.png" alt="">
                     </a>
                     <a href="https://www.instagram.com/" target="_blank">
-                        <img src="img/ico-insta.png" alt="">
+                        <img src="IMAGENES/ico-insta.png" alt="">
                     </a>
                 </div>
             </div>
             <div class="caja-direccion">
                 <h3 class="direccion-h3">Direcciones</h3>
                 <div class="direcciones">
-                    <img src="img/ico-tel.png" alt="">
+                    <img src="IMAGENES/ico-tel.png" alt="">
                     <a class="texto-direccion" href="#">+54 2965454813</a>
                 </div>
-
-               <div class="direcciones">  
-                <img src="img/ico-gmail.png" alt=""> 
-                <a class="texto-direccion" href="#">E-mailEjemplo@gmail.com</a>
+    
+                <div class="direcciones">
+                    <img src="IMAGENES/ico-gmail.png" alt="">
+                    <a class="texto-direccion" href="#">E-mailEjemplo@gmail.com</a>
                 </div>
                 <div class="direcciones">
-                    <img src="img/ico-ubi.png" alt="">
-                    <a class="texto-direccion" href="#">Av. Corrientes 1234, CABA, Buenos Aires. </a> 
+                    <img src="IMAGENES/ico-ubi.png" alt="">
+                    <a class="texto-direccion" href="#">Av. Corrientes 1234, CABA, Buenos Aires. </a>
                 </div>
-             
+    
             </div>
             <div class="caja-sugerencias">
                 <div class="caja-sug-interna">
-                   <h3 class="guia-compra">Guia de compra</h3>
+                    <h3 class="guia-compra">Guia de compra</h3>
                     <a class="texto-sugerencia" target="_blank" href="">Cómo comprar</a>
-                    <a class="texto-sugerencia"  target="_blank" href="">Envío</a>
-                    <a class="texto-sugerencia"  target="_blank" href="">Cambios y devolución</a> 
-                 </div> 
+                    <a class="texto-sugerencia" target="_blank" href="">Envío</a>
+                    <a class="texto-sugerencia" target="_blank" href="">Cambios y devolución</a>
+                </div>
             </div>
             <div class="caja-newsletter">
-                <h3>Recibe nuestras ofertas</h3>
-                <form action="">
-                    <input type="email" required placeholder="Tu e-mail">
-                    <button type="submit">Suscribirse</button>
+                <h3>Recibe nuestras promos</h3>
+                <form action="" method="POST" autocomplete="on">
+                    <input type="email" name="email" required placeholder="Tu e-mail">
+                    <button type="submit" j>Suscribirse</button>
                 </form>
             </div>
         </div>
@@ -182,6 +168,8 @@
             <p>Sitio creado por: Cecilia, Juan, Ricardo y Ruben </p>
         </div>
     </footer>
-    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="./js/main2.js"></script>
 </body>
 </html>
