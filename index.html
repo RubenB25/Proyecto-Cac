@@ -33,23 +33,23 @@
                                 <input id="input-buscador" type="text" v-model="busqueda" placeholder="Buscar"
                                     class="input-with-lupa">
                             </div>
-                        <ul id="buscador-box">
-                            <div class="results">
-                                <li v-for="producto in productosLimitados" :key="producto.id">
-                                    <button v-on:click="mostrarProducto(producto)" id="results-box">
-                                        <img :src="producto.img" alt="" id="img-buscador">
-                                        <div id="contenedor-datos-result">
-                                            <p>{{ producto.name }}</p>
-                                            <p>{{ producto.price }}</p>
-                                        </div>
-                                    </button>
-                                </li>
-                                <div id="ver-todos">
-                                    <p id="text-ver">Ver todos los productos.</p>
+                            <ul id="buscador-box">
+                                <div class="results">
+                                    <li v-for="producto in productosLimitados" :key="producto.id">
+                                        <button v-on:click="mostrarProducto(producto)" id="results-box">
+                                            <img :src="producto.img" alt="" id="img-buscador">
+                                            <div id="contenedor-datos-result">
+                                                <p>{{ producto.name }}</p>
+                                                <p>{{ producto.price }}</p>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <div id="ver-todos">
+                                        <p id="text-ver">Ver todos los productos.</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </ul>
-                </div>
+                            </ul>
+                        </div>
                 </div>
                 </li>
                 </div>
@@ -82,21 +82,24 @@
 
 
     <main class="main">
-        <section class="section-1">
-            <h2 class="texto-section">Mujer</h2>
-            <a class="a-main"href="Mujer.html">
-                <img src="img/img-mujer.png" alt="">
+        <article class="section-wrapper">
+            <section class="section-1">
+                <h2 class="texto-section">Mujer</h2>
+                <a class="a-main" href="Mujer.html">
+                    <img src="img/img-mujer.png" alt="">
 
-            </a>
-        </section>
+                </a>
+            </section>
 
-        <section class="section-2">
-            <h2 class="texto-section">Hombre</h2>
-            <a class="a-main" href="Hombre.html">
-                <img src="img/img-hombre.png" alt="">
-            </a>
+            <section class="section-2">
+                <h2 class="texto-section">Hombre</h2>
+                <a class="a-main" href="Hombre.html">
+                    <img src="img/img-hombre.png" alt="">
+                </a>
 
-        </section>
+            </section>
+        </article>
+
         <aside class="carrito" id="carrito">
             <h3>Carrito de Compras</h3>
             <button class="cerrar-carrito" id="cerrar">Cerrar</button>
@@ -106,7 +109,7 @@
             <button id="comprar">Realizar compra!</button>
         </aside>
 
-        <section class="section-3"> <!--Seccion Instagram-->                                         
+        <section class="section-3"> <!--Seccion Instagram-->
             <a href="https://www.instagram.com/moksha_sweaters/" target="_blank">
                 <img src="./img/vinculo-ig-negro.png" alt="">
             </a>

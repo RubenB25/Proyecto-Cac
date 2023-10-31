@@ -303,14 +303,13 @@ a {
 
 
 
-
-
 /* Main */
 
 .main {
     width: 100%;
     height: calc(100vh-500px);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -1194,3 +1193,45 @@ div img{
     transition: .4s ease;
 }
 
+
+
+.section-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+    /* Seccion 3 (Instagram)*/
+    .section-3{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:rgba(221, 147, 247, .8);
+        margin-top: 20px;
+        width: 100%;
+    }
+    .section-3 a img{
+        height: 12rem;
+    }
+    .section-3 a:hover{
+        transform: scale(1.02);
+        transition: .5s ease;
+    }
+    .section-3 a:not(:hover){
+        transition: .5s ease;
+    }
+    
+        /* Seccion 4 (Medios de pago) */
+    .section-4{
+        background-color: rgba(221, 147, 247);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #merc-pago{
+        height: 6rem;
+    }
+    
