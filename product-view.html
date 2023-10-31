@@ -64,25 +64,24 @@
                                 <input id="input-buscador" type="text" v-model="busqueda" placeholder="Buscar"
                                     class="input-with-lupa">
                             </div>
-                        </div>
 
-                        <ul id="buscador-box">
-                            <div class="results">
-                                <li v-for="producto in productosLimitados" :key="producto.id">
-                                    <button v-on:click="mostrarProducto(producto)" id="results-box">
-                                        <img :src="producto.img" alt="" id="img-buscador">
-                                        <div id="contenedor-datos-result">
-                                            <p>{{ producto.name }}</p>
-                                            <p>{{ producto.price }}</p>
-                                        </div>
-                                    </button>
-                                </li>
-                                <div id="ver-todos">
-                                    <p id="text-ver">Ver todos los productos.</p>
+                            <ul id="buscador-box">
+                                <div class="results">
+                                    <li v-for="producto in productosLimitados" :key="producto.id">
+                                        <button v-on:click="mostrarProducto(producto)" id="results-box">
+                                            <img :src="producto.img" alt="" id="img-buscador">
+                                            <div id="contenedor-datos-result">
+                                                <p>{{ producto.name }}</p>
+                                                <p>{{ producto.price }}</p>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <div id="ver-todos">
+                                        <p id="text-ver">Ver todos los productos.</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </ul>
-                </div>
+                            </ul>
+                        </div>
                 </div>
                 </li>
                 </div>
@@ -108,7 +107,18 @@
                 </a>
             </ul>
         </nav>
-
+        <ul class="ul-menu" style="display: none;">
+            <a class="a-menu" href="registro.html">
+                <li class="">
+                    Registrarse
+                </li>
+            </a>
+            <a class="a-menu" href="login.html">
+                <li class="">
+                    Ingresar
+                </li>
+            </a>
+        </ul>
 
     </header>
     <main class="main">

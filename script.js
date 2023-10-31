@@ -54,7 +54,7 @@ aContacto.addEventListener('click', () => {
 
 window.addEventListener('resize', () => {
     
-
+    const btnHeader = document.querySelector("#menu-btn"); 
     const header = document.querySelector('.header');
     if (window.innerWidth > 768) {
         header.style.backgroundColor = 'transparent';
@@ -63,7 +63,7 @@ window.addEventListener('resize', () => {
         ulMenu.style.display= "none";
     } else {
         header.style.backgroundColor = 'white';
-        
+        btnHeader.style.backgroundImage = "linear-gradient(to bottom, rgba(250, 207, 216, 0.854), rgba(255, 230, 235, 0.905)";
     }
 });
 buscador.addEventListener('input', () => {
@@ -71,6 +71,7 @@ buscador.addEventListener('input', () => {
         resultado.style.display = 'none'; 
     } else {
         resultado.style.display = 'block'; 
+        
     }
 });
 
@@ -89,21 +90,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 });
-
-const carrito = document.querySelector("#carrito");     //asignamos a "carrito" el id del aside carrito
-const abrir = document.querySelector("#abrir");         //asignamos a "abrir" el id del boton abrir
-const cerrar = document.querySelector("#cerrar");       //asignamos a "cerrar" el id del boton cerrar
-
-//Cada vez que se haga click en ABRIR, se le añade "visible" al aside
-abrir.addEventListener("click", () => {      
-    carrito.classList.add("visible");
-    carrito.style.position = "fixed";
-    document.body.classList.add("no-scroll");
-})
-
-//Cada vez que se haga click en CERRAR, se le remueve "visible" al aside
-cerrar.addEventListener("click", () => {
-    carrito.classList.remove("visible");
-    document.body.classList.remove("no-scroll");
-})
-
