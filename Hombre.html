@@ -22,7 +22,7 @@
             <ul>
                 <div id="buscador">
                     <li class="buscador-group">
-                        <div id="app">
+                        <div id="app1">
                             <input id="input-buscador" type="text" v-model="busqueda" placeholder="Buscar">
                             <ul id="buscador-box">
                                 <div class="results">
@@ -73,17 +73,13 @@
 <body>
 
     <div id="app">
-        <div class="tarjeta" v-for="elemento in datos1">
+        <div class="tarjeta" v-for="elemento in datos">
             <img v-bind:src="elemento.foto" :alt="elemento.nombre">
             <p>ID:{{elemento.id}}</p>
             <p>Nombre:{{elemento.nombre}}</p>
             <p>{{elemento.Precio}}</p>
         </div>
     </div>
-
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
-    <script src="./js/main2.js"></script>
     <footer class="footer" id="footer">
         <div class="group-1">
             <div class="caja-logo">
@@ -141,5 +137,8 @@
             <p>Sitio creado por: Cecilia, Juan, Ricardo y Ruben </p>
         </div>
     </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="./js/main2.js"></script>
 </body>
 </html>
