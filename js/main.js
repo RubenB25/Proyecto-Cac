@@ -5,9 +5,11 @@ const cerrar = document.querySelector("#cerrar");       //asignamos a "cerrar" e
 //Cada vez que se haga click en ABRIR, se le añade "visible" al aside
 abrir.addEventListener("click", () => {      
     carrito.classList.add("visible");
+    carrito.style.position = 'fixed';
 })
 
 //Cada vez que se haga click en CERRAR, se le remueve "visible" al aside
 cerrar.addEventListener("click", () => {
     carrito.classList.remove("visible");
+    
 })
