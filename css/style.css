@@ -1039,6 +1039,7 @@ form button:not(hover) {
 /* Media query width menor a 480 */
 @media(max-width: 480px) {
     .footer {
+        justify-content: space-between;
         height: 650px;
     }
 
@@ -1069,7 +1070,7 @@ form button:not(hover) {
     }
 
     .group-2 {
-        height: 15%;
+        height: 10%;
     }
 
     .caja-newsletter {
@@ -1097,7 +1098,7 @@ form button:not(hover) {
     }
     .section-wrapper{
         max-height: 100px;
-        min-height: 1200px;
+        min-height: 1250px;
         justify-content: space-between;
     }
     .section-1,
