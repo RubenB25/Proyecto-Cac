@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        html,
+        body {
+            background-image: none !important;
+            background-color: rgb(252, 252, 252);
+        }
+
+        .a-header {
+            border-radius: 5px;
+            background-image: linear-gradient(to bottom, rgba(250, 207, 216, 0.854), rgba(255, 230, 235, 0.905));
+            color: white;
+        }
+
+        .a-header li {
+            color: rgb(79, 79, 79);
+        }
+
+        #input-buscador {
+            color: black;
+        }
+
+        .header {
+            border-bottom: 1px solid rgb(221, 221, 221);
+            /* box-shadow: -3px 4px 2px rgb(163, 163, 163); */
+        }
+
+        .nav-link:hover {
+            background-color: rgb(251, 191, 221);
+            color: white;
+        }
+    </style>
+    <title>Moksha sweaters</title>
+</head>
+<body>
+    <header class="header" style="height: 150px;">
+        <a href="https://api.whatsapp.com/send?phone=3516548481" id="icon-whatsapp" target="_blank">
+            <img src="img/logo-whatsapp.png" alt="" class="logo-whatsapp"></a>
+        <nav class="nav">
+            <!--Ruben header.-->
+            <div class="logo-header">
+                <a href="index.html">
+                    <img src="img/Logo.png" alt="">
+                </a>
+
+            </div>
+            <ul>
+                <div id="buscador">
+                    <li class="buscador-group">
+                        <div id="app1">
+                            <div class="search-input-container">
+                                <input id="input-buscador" type="text" v-model="busqueda" placeholder="Buscar"
+                                    class="input-with-lupa">
+                            </div>
+                        <ul id="buscador-box">
+                            <div class="results">
+                                <li v-for="producto in productosLimitados" :key="producto.id">
+                                    <button v-on:click="mostrarProducto(producto)" id="results-box">
+                                        <img :src="producto.img" alt="" id="img-buscador">
+                                        <div id="contenedor-datos-result">
+                                            <p>{{ producto.name }}</p>
+                                            <p>{{ producto.price }}</p>
+                                        </div>
+                                    </button>
+                                </li>
+                                <div id="ver-todos">
+                                    <p id="text-ver">Ver todos los productos.</p>
+                                </div>
+                            </div>
+                        </ul>
+                </div>
+                </div>
+                </li>
+                </div>
+                <a class="a-header" href="#footer" id="a-contacto">
+                    <li class="nav-link">
+                        Contacto
+                    </li>
+                </a>
+            </ul>
+            <ul class="ul-2">
+                <a class="a-header" href="">
+                    <li class="nav-link">
+                        Registrarse
+                    </li>
+                </a>
+                <a class="a-header" href="">
+                    <li class="nav-link">
+                        Ingresar
+                    </li>
+                </a>
+                <a class="a-header" href="#">
+                    <img src="img/img-btn2.png" id="menu-btn" alt="">
+                </a>
+            </ul>
+        </nav>
+
+
+    </header>
+ 
+   
+    <main class="main">
+        <div class="signupFrm">
+            <form action="" class="form">
+              <h1 class="title">Registrarse</h1>
+        
+              <div class="inputContainer">
+                <input type="text" class="input" placeholder="a">
+                <label for="" class="label">E-mail</label>
+              </div>
+        
+              <div class="inputContainer">
+                <input type="text" class="input" placeholder="a">
+                <label for="" class="label">Nombre de usuario</label>
+              </div>
+        
+              <div class="inputContainer">
+                <input type="text" class="input" placeholder="a">
+                <label for="" class="label">Contraseña</label>
+              </div>
+        
+              <div class="inputContainer">
+                <input type="text" class="input" placeholder="a">
+                <label for="" class="label">Confirmar contraseña</label>
+              </div>
+        
+              <input type="submit" class="submitBtn" value="Registrarse">
+            </form>
+          </div>
+    </main>
+    <footer class="footer">
+        <div class="group-1">
+            <div class="caja-logo">
+                <a href="#">
+                    <img src="img/Logo.png" alt="" class="logo-moksha">
+                </a>
+                <p class="texto-logo">Moksha Sweaters</p>
+                <div class="caja-redes">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="img/ico-fb.png" alt="">
+                    </a>
+                    <a href="https://twitter.com/" target="_blank">
+                        <img src="img/ico-twitter.png" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="img/ico-insta.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="caja-direccion">
+                <h3 class="direccion-h3">Direcciones</h3>
+                <div class="direcciones">
+                    <img src="img/ico-tel.png" alt="">
+                    <a class="texto-direccion" href="#">+54 2965454813</a>
+                </div>
+
+               <div class="direcciones">  
+                <img src="img/ico-gmail.png" alt=""> 
+                <a class="texto-direccion" href="#">E-mailEjemplo@gmail.com</a>
+                </div>
+                <div class="direcciones">
+                    <img src="img/ico-ubi.png" alt="">
+                    <a class="texto-direccion" href="#">Av. Corrientes 1234, CABA, Buenos Aires. </a> 
+                </div>
+             
+            </div>
+            <div class="caja-sugerencias">
+                <div class="caja-sug-interna">
+                   <h3 class="guia-compra">Guia de compra</h3>
+                    <a class="texto-sugerencia" target="_blank" href="">Cómo comprar</a>
+                    <a class="texto-sugerencia"  target="_blank" href="">Envío</a>
+                    <a class="texto-sugerencia"  target="_blank" href="">Cambios y devolución</a> 
+                 </div> 
+            </div>
+            <div class="caja-newsletter">
+                <h3>Recibe nuestras ofertas</h3>
+                <form action="">
+                    <input type="email" required placeholder="Tu e-mail">
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="group-2">
+            <p>Derechos reservados © 2023</p>
+            <p>Sitio creado por: Cecilia, Juan, Ricardo y Ruben </p>
+        </div>
+    </footer>
+    
+</body>
+</html>

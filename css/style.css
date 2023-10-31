@@ -985,6 +985,10 @@ form button:not(hover) {
     height: 100vh;
   }
   .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     width: 400px;
     border-radius: 8px;
@@ -994,7 +998,7 @@ form button:not(hover) {
   
   .title {
     font-size: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   .inputContainer {
     position: relative;
@@ -1018,7 +1022,7 @@ form button:not(hover) {
     z-index: 1;
   }
   
-::placeholder {
+  .input::placeholder {
     color: transparent;
   }
   .label {
@@ -1042,7 +1046,7 @@ form button:not(hover) {
     border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 30px;
+    margin-top: 10px;
   }
   
   .submitBtn:hover {

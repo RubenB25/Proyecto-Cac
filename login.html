@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Producto buscado - Moksha Sweaters</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&family=Montserrat:wght@300&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <style>
         html,
         body {
@@ -41,8 +35,8 @@
             color: white;
         }
     </style>
+    <title>Iniciar Sesión - Moksha</title>
 </head>
-
 <body>
     <header class="header" style="height: 150px;">
         <a href="https://api.whatsapp.com/send?phone=3516548481" id="icon-whatsapp" target="_blank">
@@ -58,14 +52,11 @@
             <ul>
                 <div id="buscador">
                     <li class="buscador-group">
-
                         <div id="app1">
                             <div class="search-input-container">
                                 <input id="input-buscador" type="text" v-model="busqueda" placeholder="Buscar"
                                     class="input-with-lupa">
                             </div>
-                        </div>
-
                         <ul id="buscador-box">
                             <div class="results">
                                 <li v-for="producto in productosLimitados" :key="producto.id">
@@ -111,43 +102,30 @@
 
 
     </header>
+ 
+   
     <main class="main">
-        <div id="app2" class="product">
-            <div id="product-container">
-                <div id="container-img">
-                    <img :src="producto && producto.img ? producto.img : ''" alt="">
-                </div>
-                <div id="product-details">
-                    <div id="details-header">
-                        <p>{{ producto && producto.name ? producto.name : '' }}</p>
-                        <p>{{ producto && producto.price ? producto.price : '' }}</p>
-                    </div>
+        <div class="signupFrm">
+            <form action="" class="form">
+              <h1 class="title">Iniciar Sesión</h1>
+        
+              <div class="inputContainer">
+                <input type="text" class="input" placeholder="a">
+                <label for="" class="label">E-mail</label>
+              </div>
+        
+              <div class="inputContainer">
+                <input type="text" class="input" placeholder="a">
+                <label for="" class="label">Contraseña</label>
+              </div>
 
-                    <div id="cST">
-                        <p>Color: {{ producto && producto.color ? producto.color : '' }}</p>
-                        <p>Stock: {{ producto && producto.stock ? producto.stock : '' }}</p>
-                        <p>Talle: {{ producto && producto.size ? producto.size : '' }}</p>
-                    </div>
-                    <div id="quantity-container">
-                        <p>Cantidad: </p>
-                        <div class="quantity-control">
-                            <button class="decrement">-</button>
-                            <input type="number" min="1" max="100" class="quantity" value="1">
-                            <button class="increment">+</button>
-                        </div>
-                    </div>
-
-                    <div id="add-cart">
-                        <p>Agregar al carrito</p>
-                    </div>
-                    <p>Descripción: {{ producto && producto.description ? producto.description : '' }}</p>
-
-                </div>
-
-            </div>
-        </div>
+                <input type="submit" class="submitBtn" value="Ingresar">
+        
+           
+            </form>
+          </div>
     </main>
-    <footer class="footer" id="footer">
+    <footer class="footer">
         <div class="group-1">
             <div class="caja-logo">
                 <a href="#">
@@ -173,29 +151,29 @@
                     <a class="texto-direccion" href="#">+54 2965454813</a>
                 </div>
 
-                <div class="direcciones">
-                    <img src="img/ico-gmail.png" alt="">
-                    <a class="texto-direccion" href="#">E-mailEjemplo@gmail.com</a>
+               <div class="direcciones">  
+                <img src="img/ico-gmail.png" alt=""> 
+                <a class="texto-direccion" href="#">E-mailEjemplo@gmail.com</a>
                 </div>
                 <div class="direcciones">
                     <img src="img/ico-ubi.png" alt="">
-                    <a class="texto-direccion" href="#">Av. Corrientes 1234, CABA, Buenos Aires. </a>
+                    <a class="texto-direccion" href="#">Av. Corrientes 1234, CABA, Buenos Aires. </a> 
                 </div>
-
+             
             </div>
             <div class="caja-sugerencias">
                 <div class="caja-sug-interna">
-                    <h3 class="guia-compra">Guia de compra</h3>
+                   <h3 class="guia-compra">Guia de compra</h3>
                     <a class="texto-sugerencia" target="_blank" href="">Cómo comprar</a>
-                    <a class="texto-sugerencia" target="_blank" href="">Envío</a>
-                    <a class="texto-sugerencia" target="_blank" href="">Cambios y devolución</a>
-                </div>
+                    <a class="texto-sugerencia"  target="_blank" href="">Envío</a>
+                    <a class="texto-sugerencia"  target="_blank" href="">Cambios y devolución</a> 
+                 </div> 
             </div>
             <div class="caja-newsletter">
-                <h3>Recibe nuestras promos</h3>
-                <form action="" method="POST" autocomplete="on">
-                    <input type="email" name="email" required placeholder="Tu e-mail">
-                    <button type="submit" j>Suscribirse</button>
+                <h3>Recibe nuestras ofertas</h3>
+                <form action="">
+                    <input type="email" required placeholder="Tu e-mail">
+                    <button type="submit">Suscribirse</button>
                 </form>
             </div>
         </div>
@@ -204,11 +182,6 @@
             <p>Sitio creado por: Cecilia, Juan, Ricardo y Ruben </p>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.6/dist/vue.global.js"></script>
-    <script src="vue/js/vueAppHome.js"></script>
-    <script src="vue/js/vueAppPV.js"></script>
-
-    <script src="script.js"></script>
+    
 </body>
-
 </html>
