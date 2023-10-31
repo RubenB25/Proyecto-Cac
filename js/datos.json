@@ -1,5 +1,5 @@
-{
-    "Artículos": [
+[
+    
           {
               "nombre":"1284",
               "Precio":"$28.500",
@@ -102,7 +102,5 @@
             "Precio":"$20.600",
             "foto":"./IMAGENES/sw_dominica.jpg"
         }
-      ]
-  }
- 
-  
+      
+  ]

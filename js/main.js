@@ -4,7 +4,7 @@ createApp({
         return {
             url: './js/datos.json',
             error: false,
-            datos: []
+            datos: {}
            
         }
     },
@@ -14,8 +14,7 @@ createApp({
                 .then(response => response.json())
                 .then(  data => {
                     console.log(data),
-                    this.datos=data.Artículos
-
+                    this.datos=data
 
                 }
                 
