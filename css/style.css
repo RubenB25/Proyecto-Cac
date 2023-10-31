@@ -347,7 +347,7 @@ a {
 
 .section-1:hover,
 .section-2:hover {
-    font-size: 0.7em;
+    font-size: 0.9em;
     filter: grayscale(0%);
     transform: scale(1.01);
     transition: 0.5s;
@@ -514,11 +514,16 @@ input::-webkit-inner-spin-button {
 .increment {
     padding: 0px 15px 0px 15px;
     border-radius: 0 45px 45px 0;
+}  
+.texto-section{
+    font-size: 2em;
 }
+
 
 /* Media query menor a 1200px */
 
 @media(max-width:1200px) {
+
     .product {
         height: 600px;
     }
@@ -546,7 +551,7 @@ input::-webkit-inner-spin-button {
 
     .section-1:hover,
     .section-2:hover {
-        font-size: 0.8em;
+        font-size: 1em;
 
     }
 
