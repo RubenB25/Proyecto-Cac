@@ -3,19 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/styleReg.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>TP-CAC</title>
 </head>
 <body>
     <header>
         <p class=" header">MOKSHA SWEATERS</p>
         <nav>
-          <a class="navheader" href="" >Inicio</a>
-          <a class="navheader" href="">Productos Hombre</a>
-          <a class="navheader" href="">Productos Mujer</a>
-          <a class="navheader" href="">Contacto</a>
-          <a class="navheader" href="./registro.html" target="_blank">Registro</a>
-          <a class="navheader" href="./ingreso.html" target="_blank">Ingresar</a>
+          <a class="navheader" href="./index.html">Inicio</a>
+          
         </nav>
   
              
@@ -23,17 +20,24 @@
  
    
     <main class="main">
-        <section class="section-1">
-            <h2 class="texto-section">Mujer</h2>
-         <img src="img/img-mujer.png" alt="">
-
-        </section>
-
-        <section class="section-2">
-            <h2 class="texto-section">Hombre</h2>
-          <img src="img/img-hombre.png" alt="">
-
-        </section>
+        <div class="signupFrm">
+            <form action="" class="form">
+              <h1 class="title">Ingresar</h1>
+        
+                   
+              <div class="inputContainer">
+                <input type="text" id="username" class="input" placeholder="Usuario">
+                <label for="" class="label">Usuario</label>
+              </div>
+        
+              <div class="inputContainer">
+                <input type="password" id="password" class="input" placeholder="Password">
+                <label for="" class="label">Password</label>
+              </div>
+        
+              <input type="submit" class="submitBtn" value="Ingresar" id="submit">
+            </form>
+          </div>
     </main>
     <footer class="footer">
         <div class="group-1">
@@ -92,6 +96,6 @@
             <p>Sitio creado por: Cecilia, Juan, Ricardo y Ruben </p>
         </div>
     </footer>
-    
+    <script src="./JS/main.js"></script>
 </body>
 </html>
