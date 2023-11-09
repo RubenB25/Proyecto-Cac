@@ -122,31 +122,32 @@
         <div class="signupFrm">
             <form action="" class="form">
               <h1 class="title">Registrarse</h1>
-        
+                     
               <div class="inputContainer">
-                <input type="text" class="input" placeholder="a">
-                <label for="" class="label">E-mail</label>
+                <input type="text" id="email" class="input" placeholder="Email" autocomplete="off">
+                <label for="email" class="label">E-mail</label>
+              </div>
+                      
+              <div class="inputContainer">
+                <input type="text" id="usuario" class="input" placeholder="Usuario" autocomplete="off">
+                <label for="usuario" class="label">Nombre de usuario</label>
+              </div>
+                   
+              <div class="inputContainer">
+                <input type="password" id="clave" class="input" placeholder="Password" autocomplete="off">
+                <label for="password" class="label">Contraseña</label>
               </div>
         
               <div class="inputContainer">
-                <input type="text" class="input" placeholder="a">
-                <label for="" class="label">Nombre de usuario</label>
+                <input type="password" id="confirmaClave" class="input" placeholder="Confirmar Contraseña"autocomplete="off">
+                <label for="confirmPassword" class="label">Confirmar contraseña</label>
               </div>
-        
-              <div class="inputContainer">
-                <input type="text" class="input" placeholder="a">
-                <label for="" class="label">Contraseña</label>
-              </div>
-        
-              <div class="inputContainer">
-                <input type="text" class="input" placeholder="a">
-                <label for="" class="label">Confirmar contraseña</label>
-              </div>
-        
-              <input type="submit" class="submitBtn" value="Registrarse">
+
+              <input type="submit" id="submit" class="submitBtn" value="Registrarse">
             </form>
           </div>
     </main>
+
     <footer class="footer">
         <div class="group-1">
             <div class="caja-logo">
