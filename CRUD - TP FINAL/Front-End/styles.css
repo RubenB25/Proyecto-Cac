@@ -1,0 +1,30 @@
+h1{
+    margin-left: 114px;
+    margin-top: 24px;
+    color: white;
+    font-weight: bold;
+}
+#new{
+    margin-left: 114px;
+}
+#error{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: bolder;
+}
+#cargando{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    font-weight: bolder;
+}
+#cargando p{
+    padding: 16px;
+}
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(./img/fondo-2.jpg);
+
+}

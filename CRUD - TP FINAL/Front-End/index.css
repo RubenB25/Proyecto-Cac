@@ -6,19 +6,25 @@
 h1{
     font-size: 2.5rem;
 }
-html,body {
+html, body {
     border-radius: 30px;
     margin: 0;
     padding: 0;
     display: flexbox;
     flex-direction: column;
     height: 100%;
-    background-image: url(../img/fondo-2.jpg); /*Imagen de fondo*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(./img/fondo-2.jpg); /*Imagen de fondo*/
 }
 
     /*Deshabilita el scroll cuando el carrito esta abierto*/
 .no-scroll {
     overflow: hidden;
+}
+
+#crud{
+    display: flex;
+    background-color: white;
+    color: rgba(78, 61, 232, .7);
 }
 
 .navheader{  
@@ -117,7 +123,7 @@ nav {
     height: 100%;
     z-index: 10000;
 }
-.carrito.visible{
+.carrito .visible{
     opacity: 1;
     visibility: visible;
 }
@@ -588,7 +594,3 @@ header {
 p{
    text-align: center;
 }
-.resoc{
-    text-align: center;
-}
-
