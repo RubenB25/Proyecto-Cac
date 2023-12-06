@@ -4,7 +4,8 @@ const { createApp } = Vue;
         data() {
             return {
                 productos:[],
-                url:'http://127.0.0.1:5000/productos',
+
+                url:'https://rubenb25.pythonanywhere.com/productos',
                 error: false,
                 cargando: true
             }    
@@ -38,14 +39,18 @@ const { createApp } = Vue;
                 let producto = {
                     nombre: this.nombre,
                     precio: this.precio,
+                    descripcion: this.descripcion,
                     stock: this.stock,
+                    color : this.color,
+                    talle : this.talle,
+                    categoria : this.categoria,
                     imagen: this.imagen
                 };
                 var options = {
                     body: JSON.stringify(producto),
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    redirect: 'follow'
+                    redirect: 'follow',
                 };
                 fetch(this.url, options)
                     .then(function () {
@@ -54,7 +59,7 @@ const { createApp } = Vue;
                     })
                     .catch(err => {
                         console.error(err);
-                        alert("Error al Grabar")  // puedo mostrar el error tambien
+                        alert("Error al Grabar", err)  // puedo mostrar el error tambien
                     });      
             },
         },
