@@ -2,7 +2,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            url: './js/datos2.json',
+            url: './js/hombre.json',
             error: false,
             datos1: []
            

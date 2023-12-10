@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="CSS/cssLogin.css">
+    <link rel="stylesheet" href="./CSS/cssLogin.css">
     <script src="./js/validacion.js"></script>
     
 </head>
@@ -13,17 +13,18 @@
     <h2>Inicio de Sesión</h2>
     <form  onsubmit="return validar()">
         <div class="username">
-          <label for="usuario">Nombre de Usuario</label><br>
-          <input type="text" name="usuario" id="usuario"><br>
+          <input type="text" name="usuario" id="usuario" placeholder="Ingrese su nombre de usuario"><br>
         </div>
           <div id="validar_usuario" style="color: red;">&nbsp;</div>
         <div class="clave">
-          <label for="clave">Contraseña</label><br>
-          <input type="password" name="clave" id="clave"><br>
+          <input type="password" name="clave" id="clave" placeholder="Ingrese su contraseña"><br>
         </div>
         <div id="validar_clave" style="color: red;">&nbsp;</div>
           <div class="recordar">¿Olvidaste la contraseña?</div>
-          <input type="submit" value="Iniciar Sesión">
+          <div id="notRedireccion">  
+            <a href=""></a>
+            <button type="submit" value="Iniciar Sesión" id="iniciar">Iniciar sesión</button>
+          </div>
     </form>
   </div>
 </body>

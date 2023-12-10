@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+ <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hombre</title>
     <script src="https://kit.fontawesome.com/5891e1a1cd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS/estilo.css">
     <style>
@@ -38,81 +37,79 @@
             color: white;
         }
     </style>
+  
 </head>
 <header class="header" style="height: 150px;">
-    <a href="https://api.whatsapp.com/send?phone=3516548481" id="icon-whatsapp" target="_blank">
-        
-        <img src="IMAGENES/logo-whatsapp.png" alt="" class="logo-whatsapp"></a>
-    <nav class="nav">
-        <div class="logo-header">
-            <a href="">
-                <img src="IMAGENES/Logo.png" alt="">
-            </a>
+        <a href="https://api.whatsapp.com/send?phone=3516548481" id="icon-whatsapp" target="_blank">
+            <img src="IMAGENES/logo-whatsapp.png" alt="" class="logo-whatsapp"></a>
+        <nav class="nav">
+            <div class="logo-header">
+                <a href="index.html">
+                    <img src="IMAGENES/Logo.png" alt="">
+                </a>
 
-        </div>
-        <ul>
-            <div id="buscador">
-                <li class="buscador-group">
-                    <div id="app1">
-                        <input id="input-buscador" type="text" v-model="busqueda" placeholder="Buscar">
-                        <ul id="buscador-box">
-                            <div class="results">
-                                <li v-for="producto in productosLimitados" :key="producto.id">
-                                  <div id="results-box">
-                                    <img :src="producto.img" alt="" id="img-buscador">
-                                    <div id="contenedor-datos-result">
-                                      <p>{{ producto.name }}</p>
-                                      <p>{{ producto.price }}</p>
+            </div>
+            <ul>
+                <div id="buscador">
+                    <li class="buscador-group">
+                        <div id="app1">
+                            <input id="input-buscador" type="text" v-model="busqueda" placeholder="Buscar">
+                            <ul id="buscador-box">
+                                <div class="results">
+                                    <li v-for="producto in productosLimitados" :key="producto.id">
+                                      <div id="results-box">
+                                        <img :src="producto.img" alt="" id="img-buscador">
+                                        <div id="contenedor-datos-result">
+                                          <p>{{ producto.name }}</p>
+                                          <p>{{ producto.price }}</p>
+                                        </div>
+                                      </div>
+                                    </li>
+                                    <div id="ver-todos">
+                                      <p id="text-ver">Ver todos los productos.</p>
                                     </div>
                                   </div>
-                                </li>
-                                <div id="ver-todos">
-                                  <p id="text-ver">Ver todos los productos.</p>
-                                </div>
-                              </div>
-                        </ul>
-                    </div>
-            </div>
-            </li>
-            </div>
-            <a class="a-header" href="#footer" id="a-contacto">
-                <li class="nav-link">
-                    Contacto
+                            </ul>
+                        </div>
+                </div>
                 </li>
-            </a>
-        </ul>
-        <ul class="ul-2">
-            <a class="a-header" href="">
-                <li class="nav-link">
-                    Registrarse
-                </li>
-            </a>
-            <a class="a-header" href="">
-                <li class="nav-link">
-                    Ingresar
-                </li>
-            </a>
-            <a class="a-header" href="#">
-                <img src="IMAGENES/img-btn2.png" id="menu-btn" alt="">
-            </a>
-        </ul>
-    </nav>
+                </div>
+                <a class="a-header" href="#footer" id="a-contacto">
+                    <li class="nav-link">
+                        Contacto
+                    </li>
+                </a>
+            </ul>
+            <ul class="ul-2">
+                <a class="a-header" href="">
+                    <li class="nav-link">
+                        Registrarse
+                    </li>
+                </a>
+                <a class="a-header" href="">
+                    <li class="nav-link">
+                        Ingresar
+                    </li>
+                </a>
+                <a class="a-header" href="#">
+                    <img src="IMAGENES/img-btn2.png" id="menu-btn" alt="">
+                </a>
+            </ul>
+        </nav>
 
 
-</header>
-
+    </header>
 
 <body>
 
     <div id="app">
-        <div class="tarjeta" v-for="elemento in datos">
+        <div class="tarjeta" v-for="elemento in datos1">
             <img v-bind:src="elemento.foto" :alt="elemento.nombre">
-            <p>ID:{{elemento.id}}</p>
+            <!-- <p>ID:{{elemento.id}}</p> -->
             <p>Nombre:{{elemento.nombre}}</p>
             <p>{{elemento.Precio}}</p>
         </div>
     </div>
-
     <footer class="footer" id="footer">
         <div class="group-1">
             <div class="caja-logo">
@@ -172,7 +169,6 @@
     </footer>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-    <script src="./js/main.js"></script>
+    <script src="./js/hombre.js"></script>
 </body>
-
 </html>
