@@ -1,0 +1,106 @@
+[
+    
+          {
+              "nombre":"1284",
+              "Precio":"$28.500",
+              "foto":"./IMAGENES/1284.jpg"
+          },
+          {
+              "nombre":"1285 ",
+              "Precio":"$22.900",
+              "foto":"./IMAGENES/1285.jpg"
+          },
+          {
+              "nombre":"1287",
+              "Precio":"21.500",
+              "foto":"./IMAGENES/1287.jpg"
+          },
+          {
+            "nombre":"1289",
+            "Precio":"$20.600",
+            "foto":"./IMAGENES/1289b2.jpg"
+        },
+        {
+            "nombre":"1290",
+            "Precio":"$22.600",
+            "foto":"./IMAGENES/1290d.jpg"
+        },
+         
+        {
+            "nombre":"1291",
+            "Precio":"$23.500",
+            "foto":"./IMAGENES/1291B2.jpg"
+        },
+        {
+            "nombre":"3310",
+            "Precio":"$22.800",
+            "foto":"./IMAGENES/3310.jpg"
+        },
+        {
+            "nombre":"3311",
+            "Precio":"$23.500",
+            "foto":"./IMAGENES/3311.jpg"
+        },
+        {
+            "nombre":"3312",
+            "Precio":"$24.400",
+            "foto":"./IMAGENES/3312.jpg"
+        },
+        {
+            "nombre":"3313",
+            "Precio":"$22.400",
+            "foto":"./IMAGENES/3313.jpg"
+        },
+        {
+            "nombre":"3314",
+            "Precio":"$27.900",
+            "foto":"./IMAGENES/3314.jpg"
+        },
+        {
+            "nombre":"3315",
+            "Precio":"$30.400",
+            "foto":"./IMAGENES/3315.jpg"
+        },
+        {
+            "nombre":"3316",
+            "Precio":"$20.400",
+            "foto":"./IMAGENES/3316.jpg"
+        },
+        {
+            "nombre":"3317",
+            "Precio":"$18.950",
+            "foto":"./IMAGENES/3317.jpg"
+        },
+        {
+            "nombre":"3319",
+            "Precio":"$22.400",
+            "foto":"./IMAGENES/3319.jpg"
+        },
+        {
+            "nombre":"Campera Juana",
+            "Precio":"$24.300",
+            "foto":"./IMAGENES/camp_juana.jpg"
+        },
+        {
+            "nombre":"Cardigan Anna",
+            "Precio":"$34.800",
+            "foto":"./IMAGENES/Cardi_Anna.jpeg"
+        },
+        {
+            "nombre":"Kimono Lucía",
+            "Precio":"$24.200",
+            "foto":"./IMAGENES/Kim_lucia.jpg"
+        },
+        {
+            "nombre":"Remera Curazao",
+            "Precio":"$21.900",
+            "foto":"./IMAGENES/rem_curazao.jpg"
+        },
+
+        {
+            "nombre":"Sweater Dominica",
+            "Precio":"$20.600",
+            "foto":"./IMAGENES/sw_dominica.jpg"
+        }
+      
+  ]
