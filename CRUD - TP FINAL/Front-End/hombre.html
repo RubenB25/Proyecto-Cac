@@ -3,7 +3,7 @@
  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sweaters Hombres</title>
+    <title>Catalogo</title>
     <script src="https://kit.fontawesome.com/5891e1a1cd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS/estilo.css">
     <style>
@@ -104,10 +104,10 @@
 
     <div id="app">
         <div class="tarjeta" v-for="elemento in datos1">
-            <img v-bind:src="elemento.foto" :alt="elemento.nombre">
+            <img v-bind:src="elemento.imagen" :alt="elemento.nombre">
             <!-- <p>ID:{{elemento.id}}</p> -->
             <p>Nombre:{{elemento.nombre}}</p>
-            <p>{{elemento.Precio}}</p>
+            <p>{{elemento.precio}}</p>
         </div>
     </div>
     <footer class="footer" id="footer">
