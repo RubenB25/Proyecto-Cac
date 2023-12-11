@@ -25,6 +25,7 @@ h1{
     padding: 16px;
 }
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(./img/fondo-2.jpg);
-
+    background-image: linear-gradient(to bottom, rgba(126, 95, 161, 0.7), rgba(133, 17, 228, 0.425)), url(./img/img-tela.jpeg);
+    background-repeat: repeat-y;
+    background-size: 100%;
 }

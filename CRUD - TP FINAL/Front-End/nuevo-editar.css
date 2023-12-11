@@ -1,0 +1,8 @@
+main{
+    width: 100%;
+    background-color: rgba(99, 149, 192, 0.521);
+}
+
+input{
+    display: flex;
+}
