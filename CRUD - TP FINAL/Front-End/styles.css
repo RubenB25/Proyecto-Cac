@@ -1,0 +1,31 @@
+h1{
+    margin-left: 114px;
+    margin-top: 24px;
+    color: white;
+    font-weight: bold;
+}
+#new{
+    margin-left: 114px;
+}
+#error{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: bolder;
+}
+#cargando{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    font-weight: bolder;
+}
+#cargando p{
+    padding: 16px;
+}
+body{
+    background-image: linear-gradient(to bottom, rgba(126, 95, 161, 0.7), rgba(133, 17, 228, 0.425)), url(./img/img-tela.jpeg);
+    background-repeat: repeat-y;
+    background-size: 100%;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="./CSS/cssLogin.css">
+    <script src="./js/validacion.js"></script>
+    
+</head>
+<body>
+  <div class="formulario">
+    <h2>Inicio de Sesión</h2>
+    <form  onsubmit="return validar()">
+        <div class="username">
+          <input type="text" name="usuario" id="usuario" placeholder="Ingrese su nombre de usuario"><br>
+        </div>
+          <div id="validar_usuario" style="color: red;">&nbsp;</div>
+        <div class="clave">
+          <input type="password" name="clave" id="clave" placeholder="Ingrese su contraseña"><br>
+        </div>
+        <div id="validar_clave" style="color: red;">&nbsp;</div>
+          <div class="recordar">¿Olvidaste la contraseña?</div>
+          <div id="notRedireccion">  
+            <a href=""></a>
+            <button type="submit" value="Iniciar Sesión" id="iniciar">Iniciar sesión</button>
+          </div>
+    </form>
+  </div>
+</body>
+</html>

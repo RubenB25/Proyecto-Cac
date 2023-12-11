@@ -1,0 +1,63 @@
+[
+      {
+          "nombre":"2466",
+          "Precio":"21.000",
+          "foto":"./IMAGENES/FOTO1-B.jpg"
+      },
+      {
+          "nombre":"2465",
+          "Precio":"$21.300",
+          "foto":"./IMAGENES/2465.jpg"
+      },
+      {
+          "nombre":"Sweater Balder",
+          "Precio":"$20.600",
+          "foto":"./IMAGENES/sw_balder.jpg"
+      },
+      {
+          "nombre":"Sweater Aren",
+          "Precio":"21.000",
+          "foto":"./IMAGENES/sw_aren.jpg"
+      },
+      {
+          "nombre":"Sweater Oxford",
+          "Precio":"$36.300",
+          "foto":"./IMAGENES/sw_oxford.jpeg"
+      },
+      {
+          "nombre":"Sweater Edimburgo",
+          "Precio":"$36.300",
+          "foto":"./IMAGENES/sw_edimburgo.jpg"
+      },
+      {
+          "nombre":"Campera Hermes",
+          "Precio":"$31.900",
+          "foto":"./IMAGENES/camp_hermes.jpg"
+      },
+      {
+          "nombre":"2467",
+          "Precio":"$32.900",
+          "foto":"./IMAGENES/2467.jpg"
+      },
+      {
+          "nombre":"2469",
+          "Precio":"$26.500",
+          "foto":"./IMAGENES/2469.jpg"
+      },
+      {
+          "nombre":"2470",
+          "Precio":"$26.300",
+          "foto":"./IMAGENES/2470.jpg"
+      },
+      {
+          "nombre":"2471",
+          "Precio":"$19.300",
+          "foto":"./IMAGENES/2471.jpg"
+      },
+      {
+        "nombre":"Campera Charly",
+        "Precio":"$24.900",
+        "foto":"./IMAGENES/camp_charly.png"
+    }
+  ]
+

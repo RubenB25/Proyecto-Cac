@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Moksha Sweaters</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="./img/Logo.png" alt="" id="logo-moksha">
+            </a>
+            <a class="navheader" href="index.html" id="home-btn">Inicio</a>
+            <a class="navheader" href="hombre.html">Catálogo</a>
+            <!-- <a class="navheader" href="mujer.html">Productos Mujer</a>  -->
+            <a class="navheader" id="crud" href="./sesionAdm.html">Productos CRUD</a>
+        </nav>
+        <button class="abrir-carrito" id="abrir">
+            <img src="./img/carrito.png" alt="">
+        </button>
+    </header>
+    
+    <aside class="carrito" id="carrito">
+        <h3>Carrito de Compras</h3>
+        <button class="cerrar-carrito" id="cerrar">Cerrar</button>
+        <p>Subtotal:</p>
+        <p>Envio:</p>
+        <p>Total:</p>
+        <button id="comprar">Realizar compra</button>
+    </aside>
+    <main class="main">
+        <section class="section-1">
+            <h2 class="texto-section">Mujer</h2>
+            <a href="mujer.html">
+                <img src="./img/img-mujer.png" alt="">
+            </a>
+        </section>
+
+        <section class="section-2">
+            <h2 class="texto-section">Hombre</h2>
+            <a href="hombre.html">
+                <img src="./img/img-hombre.png" alt="">
+            </a>
+        </section>
+
+        <aside class="carrito" id="carrito">
+            <h3>Carrito de Compras</h3>
+            <button class="cerrar-carrito" id="cerrar">Cerrar</button>
+            <p>Subtotal:</p>
+            <p>Envio:</p>
+            <p>Total:</p>
+            <button id="comprar">Realizar compra!</button>
+        </aside>
+
+        <section class="section-3"> <!--Seccion Instagram-->                                         
+            <a href="https://www.instagram.com/moksha_sweaters/" target="_blank">
+                <img src="./img/vinculo-ig-negro.png" alt="">
+            </a>
+        </section>
+
+        <section class="section-4">
+            <h2>Medios de Pago</h2>
+            <div id="medios-pago">
+                <img src="./img/mercado-pago.png" id="merc-pago">
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="group-1">
+            <div class="caja-logo">
+                <a href="#">
+                    <img src="img/Logo.png" alt="" class="logo-moksha">
+                </a>
+                <p class="texto-logo">Moksha Sweaters</p>
+                <div class="caja-redes">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="img/ico-fb.png" alt="">
+                    </a>
+                    <a href="https://twitter.com/" target="_blank">
+                        <img src="img/ico-twitter.png" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="img/ico-insta.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="caja-direccion">
+                <h3 class="direccion-h3">Direcciones</h3>
+                <div class="direcciones">
+                    <img src="img/ico-tel.png" alt="">
+                    <a class="texto-direccion" href="#">+54 2965454813</a>
+                </div>
+
+               <div class="direcciones">  
+                <img src="img/ico-gmail.png" alt=""> 
+                <a class="texto-direccion" href="#">E-mailEjemplo@gmail.com</a>
+                </div>
+                <div class="direcciones">
+                    <img src="img/ico-ubi.png" alt="">
+                    <a class="texto-direccion" href="#">Av. Corrientes 1234, CABA, Buenos Aires. </a> 
+                </div>
+             
+            </div>
+            <div class="caja-sugerencias">
+                <div class="caja-sug-interna">
+                   <h3 class="guia-compra">Guia de compra</h3>
+                    <a class="texto-sugerencia" target="_blank" href="">Cómo comprar</a>
+                    <a class="texto-sugerencia"  target="_blank" href="">Envío</a>
+                    <a class="texto-sugerencia"  target="_blank" href="">Cambios y devolución</a> 
+                 </div> 
+            </div>
+            <div class="caja-newsletter">
+                <h3>Recibe nuestras ofertas</h3>
+                <form action="">
+                    <input type="email" required placeholder="Tu e-mail">
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="group-2">
+            <p>Derechos reservados © 2023</p>
+            <p>Sitio creado por: Cecilia, Juan, Ricardo y Ruben </p>
+        </div>
+    </footer>
+    
+    <script src="./js/main.js"></script>
+</body>
+</html>
