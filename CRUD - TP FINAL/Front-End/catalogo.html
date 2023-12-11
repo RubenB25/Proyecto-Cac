@@ -58,10 +58,10 @@
                                 <div class="results">
                                     <li v-for="producto in productosLimitados" :key="producto.id">
                                       <div id="results-box">
-                                        <img :src="producto.img" alt="" id="img-buscador">
+                                        <img :src="producto.im" alt="" id="img-buscador">
                                         <div id="contenedor-datos-result">
-                                          <p>{{ producto.name }}</p>
-                                          <p>{{ producto.price }}</p>
+                                          <p>{{ producto.nombre }}</p>
+                                          <p>{{ producto.precio }}</p>
                                         </div>
                                       </div>
                                     </li>
@@ -104,10 +104,10 @@
 
     <div id="app">
         <div class="tarjeta" v-for="elemento in datos1">
-            <img v-bind:src="elemento.foto" :alt="elemento.nombre">
+            <img v-bind:src="elemento.imagen" :alt="elemento.nombre">
             <!-- <p>ID:{{elemento.id}}</p> -->
             <p>Nombre:{{elemento.nombre}}</p>
-            <p>{{elemento.Precio}}</p>
+            <p>{{elemento.precio}}</p>
         </div>
     </div>
     <footer class="footer" id="footer">
@@ -169,6 +169,6 @@
     </footer>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-    <script src="./js/hombre.js"></script>
+    <script src="./js/catalogo.js"></script>
 </body>
 </html>
